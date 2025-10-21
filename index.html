@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Calling — A Quiet Path Home</title>
-  <link rel="stylesheet" href="dist/uno.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
     
@@ -13,88 +14,144 @@
       background-color: #2f2f2f;
       color: #e6e6e6;
     }
-  </style>
 
-    body {
-      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-      max-width: 900px;
+    .btn-custom {
+      background-color: #8aa7a1;
+      border-color: #8aa7a1;
+      color: white;
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      transition: transform 0.2s ease;
     }
 
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
+    .btn-custom:hover {
+      background-color: #7a9791;
+      transform: translateY(-2px);
     }
 
-    .muted {
-      color: var(--text-muted);
+    .btn-outline-custom {
+      border-color: #8aa7a1;
+      color: #8aa7a1;
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
     }
 
-    .text-center {
-      text-align: center;
+    .btn-outline-custom:hover {
+      background-color: rgba(138, 167, 161, 0.1);
+    }
+
+    .text-muted-custom {
+      color: #b0b0b0 !important;
+    }
+
+    .bg-custom {
+      background-color: #363636 !important;
+    }
+
+    .border-custom {
+      border-color: #404040 !important;
+    }
+
+    .back-to-top-btn {
+      width: 48px;
+      height: 48px;
     }
   </style>
 </head>
 <body>
-  <header class="text-center py-20 container" role="banner">
-    <h1 class="text-4xl font-serif mb-4">Come home. Be still. Listen.</h1>
-    <p class="text-muted text-lg mb-4">A gentle invitation to rediscover the One who quietly holds you.</p>
-    <p class="italic mb-8">"Be still, and know that I am God." — Psalm 46:10</p>
-    <p><a href="#stories" class="btn">Begin</a></p>
+  <header class="text-center py-5 container" role="banner">
+    <h1 class="display-4 mb-4">Come home. Be still. Listen.</h1>
+    <p class="text-muted-custom lead mb-4">A gentle invitation to rediscover the One who quietly holds you.</p>
+    <p class="fst-italic mb-4">"Be still, and know that I am God." — Psalm 46:10</p>
+    <p><a href="#stories" class="btn btn-custom">Begin</a></p>
   </header>
 
-  <section id="stories" class="section container">
-    <h2 class="text-2xl font-serif mb-4">Stories That Still Speak</h2>
-    <p class="text-lg">From Genesis to Revelation, true stories that point to God's steady love.</p>
+  <section id="stories" class="py-5 container">
+    <h2 class="display-5 mb-4">Stories That Still Speak</h2>
+    <p class="lead">From Genesis to Revelation, true stories that point to God's steady love.</p>
   </section>
 
-  <section id="mysticism" class="section container">
-    <h2 class="text-2xl font-serif mb-4">A Word on Wandering</h2>
-    <p class="text-lg leading-relaxed">Modern ways of self-exaltation promise power but leave the soul thirsty. We point instead toward humility, repentance, and rest.</p>
+  <section id="mysticism" class="py-5 container">
+    <h2 class="display-5 mb-4">A Word on Wandering</h2>
+    <p class="lead">Modern ways of self-exaltation promise power but leave the soul thirsty. We point instead toward humility, repentance, and rest.</p>
   </section>
 
-  <section id="testimonies" class="section container">
-    <h2 class="text-2xl font-serif mb-4">Real Stories</h2>
-    <p class="text-lg leading-relaxed">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+  <section id="testimonies" class="py-5 container">
+    <h2 class="display-5 mb-4">Real Stories</h2>
+    <p class="lead mb-4">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+    <div id="stories-container" class="row g-4">
+      <!-- Stories will be loaded here -->
+    </div>
+    <div id="story-form" class="mt-5">
+      <h3 class="h4 mb-4">Share Your Story</h3>
+      <form id="share-story-form" action="https://formsubmit.co/your@email.com" method="POST">
+        <input type="hidden" name="_subject" value="New Story Submission">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you">
+        
+        <div class="mb-3">
+          <label for="story-author" class="form-label">Your Name (optional)</label>
+          <input type="text" class="form-control bg-custom border-custom" id="story-author" name="author" placeholder="Anonymous">
+        </div>
+        
+        <div class="mb-3">
+          <label for="story-title" class="form-label fw-semibold">Story Title</label>
+          <input type="text" class="form-control bg-custom border-custom" id="story-title" name="title" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="story-body" class="form-label fw-semibold">Your Story</label>
+          <textarea class="form-control bg-custom border-custom" id="story-body" name="body" rows="6" required 
+                    placeholder="Share how God's grace has touched your life..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-custom">Share Story</button>
+      </form>
+    </div>
   </section>
 
-  <section id="resources" class="section container">
-    <h2 class="text-2xl font-serif mb-6">Resources</h2>
-    <ul class="space-y-8">
-      <li>
+  <section id="resources" class="py-5 container">
+    <h2 class="display-5 mb-4">Resources</h2>
+    <ul class="list-unstyled">
+      <li class="mb-4">
         <a href="https://www.mardel.com/bibletranslationguide" 
            target="_blank" 
            rel="noopener"
-           class="text-accent text-lg font-semibold hover:underline">Bible Translation Guide</a>
-        <p class="text-muted mt-2">Start here! A helpful guide explaining different Bible translations, their reading levels, and translation philosophies to help you choose the right Bible for your needs.</p>
+           class="text-decoration-none fw-bold fs-5">Bible Translation Guide</a>
+        <p class="text-muted-custom mt-2">Start here! A helpful guide explaining different Bible translations, their reading levels, and translation philosophies to help you choose the right Bible for your needs.</p>
       </li>
-      <li>
+      <li class="mb-4">
         <a href="https://www.youversion.com/the-bible-app/" 
            target="_blank" 
            rel="noopener"
-           class="text-accent text-lg font-semibold hover:underline">YouVersion Bible App</a>
-        <p class="text-muted mt-2">Free Bible app with multiple translations, reading plans, and daily devotionals. Available on all devices.</p>
+           class="text-decoration-none fw-bold fs-5">YouVersion Bible App</a>
+        <p class="text-muted-custom mt-2">Free Bible app with multiple translations, reading plans, and daily devotionals. Available on all devices.</p>
       </li>
-      <li>
+      <li class="mb-4">
         <a href="https://www.blueletterbible.org/" 
            target="_blank" 
            rel="noopener"
-           class="text-accent text-lg font-semibold hover:underline">Blue Letter Bible</a>
-        <p class="text-muted mt-2">In-depth study tool with Greek/Hebrew lexicon, commentaries, and cross-references. Great for word studies.</p>
+           class="text-decoration-none fw-bold fs-5">Blue Letter Bible</a>
+        <p class="text-muted-custom mt-2">In-depth study tool with Greek/Hebrew lexicon, commentaries, and cross-references. Great for word studies.</p>
       </li>
-      <li>
+      <li class="mb-4">
         <a href="https://www.logos.com/" 
            target="_blank" 
            rel="noopener"
-           class="text-accent text-lg font-semibold hover:underline">Logos Bible Software</a>
-        <p class="text-muted mt-2">Professional Bible study software with extensive library options, original language tools, and academic resources.</p>
+           class="text-decoration-none fw-bold fs-5">Logos Bible Software</a>
+        <p class="text-muted-custom mt-2">Professional Bible study software with extensive library options, original language tools, and academic resources.</p>
       </li>
     </ul>
   </section>
 
-  <section id="prayer" class="section container">
-    <h2 class="text-2xl font-serif mb-4">Need Prayer?</h2>
-    <p class="text-lg mb-8">Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
+  <section id="prayer" class="py-5 container">
+    <h2 class="display-5 mb-4">Need Prayer?</h2>
+    <p class="lead mb-4">Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
 
-    <form id="prayer-form" action="https://formsubmit.co/your@email.com" method="POST" class="space-y-6">
+    <form id="prayer-form" action="https://formsubmit.co/your@email.com" method="POST">
       <!-- FormSubmit configuration -->
       <input type="hidden" name="_subject" value="🙏 New Prayer Request">
       <input type="hidden" name="_template" value="box">
@@ -103,89 +160,93 @@
       <!-- Prevent spam -->
       <input type="text" name="_honey" class="honeypot" aria-hidden="true" tabindex="-1">
       
-      <div class="space-y-2">
-        <label for="who" class="block text-muted font-semibold">Who or what is this prayer for?</label>
+      <div class="mb-3">
+        <label for="who" class="form-label fw-semibold text-muted-custom">Who or what is this prayer for?</label>
         <input id="who" name="who" type="text" required
-               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               class="form-control bg-custom border-custom" 
                placeholder="e.g., myself, my friend Anna, my family" />
       </div>
 
-      <div class="space-y-2">
-        <label for="need" class="block text-muted font-semibold">What is the need or concern?</label>
+      <div class="mb-3">
+        <label for="need" class="form-label fw-semibold text-muted-custom">What is the need or concern?</label>
         <input id="need" name="need" type="text" required
-               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               class="form-control bg-custom border-custom" 
                placeholder="e.g., healing, wisdom, provision" />
       </div>
 
-      <div class="space-y-2">
-        <label for="feeling" class="block text-muted font-semibold">How are you feeling about this?</label>
+      <div class="mb-3">
+        <label for="feeling" class="form-label fw-semibold text-muted-custom">How are you feeling about this?</label>
         <input id="feeling" name="feeling" type="text" required
-               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               class="form-control bg-custom border-custom" 
                placeholder="e.g., anxious, grateful, confused" />
       </div>
 
-      <div class="space-y-2">
-        <label for="promise" class="block text-muted font-semibold">Is there a Bible promise or hope you'd lean on (optional)?</label>
+      <div class="mb-3">
+        <label for="promise" class="form-label fw-semibold text-muted-custom">Is there a Bible promise or hope you'd lean on (optional)?</label>
         <input id="promise" name="promise" type="text" 
-               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               class="form-control bg-custom border-custom" 
                placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
       </div>
 
       <!-- Secure communication token field -->
       <input type="hidden" name="prayer_token" id="prayer_token">
 
-      <div class="card bg-bg/30 p-4">
-        <div class="flex items-start gap-3">
-          <input type="checkbox" id="share-prayer" name="request_followup" class="mt-1" required>
-          <label for="share-prayer" class="text-small">
+      <div class="card bg-custom p-3 mb-4">
+        <div class="d-flex align-items-start gap-3">
+          <input type="checkbox" id="share-prayer" name="request_followup" class="form-check-input mt-1" required>
+          <label for="share-prayer" class="form-check-label small">
             Yes, I would like prayer support and follow-up. I understand that my request will be kept confidential 
             and I'll receive a secure way to communicate back and forth about my prayer request.
           </label>
         </div>
       </div>
 
-      <div class="flex gap-4 flex-wrap">
-        <button type="button" id="preview-btn" class="btn">Preview Prayer</button>
-        <button type="button" id="copy-btn" class="btn opacity-50" disabled>Copy Prayer</button>
-        <button type="submit" id="send-btn" class="btn-outline">Submit Prayer Request</button>
-        <button type="reset" id="reset-btn" class="btn bg-transparent border border-accent text-accent hover:bg-accent/10">Reset</button>
+      <div class="d-flex gap-2 flex-wrap mb-4">
+        <button type="button" id="preview-btn" class="btn btn-custom">Preview Prayer</button>
+        <button type="button" id="copy-btn" class="btn btn-outline-custom opacity-50" disabled>Copy Prayer</button>
+        <button type="submit" id="send-btn" class="btn btn-outline-custom">Submit Prayer Request</button>
+        <button type="reset" id="reset-btn" class="btn btn-outline">Reset</button>
       </div>
     </form>
 
-    <div id="prayer-preview" class="card mt-8" aria-live="polite" hidden>
-      <h3 class="text-xl font-serif mb-4">Your Prayer</h3>
-      <blockquote id="prayer-text" class="text-lg leading-relaxed italic"></blockquote>
+    <div id="prayer-preview" class="card mt-4 d-none" aria-live="polite">
+      <div class="card-body">
+        <h3 class="card-title h4">Your Prayer</h3>
+        <blockquote id="prayer-text" class="blockquote lead fst-italic"></blockquote>
+      </div>
     </div>
 
     <!-- Prayer Management Section (only visible to you) -->
-    <div id="prayer-management" class="mt-12 border-t border-border pt-8" hidden>
-      <h3 class="text-2xl font-serif mb-4">Prayer Management</h3>
-      <div class="grid gap-6" id="prayer-list"></div>
+    <div id="prayer-management" class="mt-5 border-top border-custom pt-4 d-none">
+      <h3 class="display-6 mb-4">Prayer Management</h3>
+      <div class="row g-4" id="prayer-list"></div>
 
       <template id="prayer-card-template">
-        <div class="card">
-          <div class="flex justify-between items-start mb-4">
-            <div>
-              <h4 class="text-lg font-semibold"></h4>
-              <p class="text-muted text-sm date"></p>
-            </div>
-            <span class="status-badge px-3 py-1 rounded-full text-sm"></span>
-          </div>
-          <div class="space-y-2 mb-4">
-            <p class="need"></p>
-            <p class="text-muted feeling"></p>
-            <p class="promise italic"></p>
-          </div>
-          <div class="space-y-4">
-            <div class="response-area hidden">
-              <label class="block text-muted font-semibold mb-2">Your Response:</label>
-              <textarea class="response-text w-full bg-bg border border-border rounded-lg px-4 py-2" 
-                        rows="4" placeholder="Write your prayer and thoughts here..."></textarea>
-            </div>
-            <div class="flex gap-3 flex-wrap">
-              <button class="btn-outline respond-btn">Respond</button>
-              <button class="btn-outline follow-up-btn">Send Follow-up</button>
-              <button class="btn-outline mark-completed-btn">Mark Complete</button>
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4 class="card-title h5"></h4>
+                  <p class="text-muted-custom small date"></p>
+                </div>
+                <span class="status-badge badge rounded-pill"></span>
+              </div>
+              <div class="mb-3">
+                <p class="need mb-2"></p>
+                <p class="text-muted-custom feeling mb-2"></p>
+                <p class="promise fst-italic"></p>
+              </div>
+              <div class="response-area d-none mb-3">
+                <label class="form-label fw-semibold text-muted-custom mb-2">Your Response:</label>
+                <textarea class="response-text form-control bg-custom border-custom" 
+                          rows="4" placeholder="Write your prayer and thoughts here..."></textarea>
+              </div>
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn btn-outline-custom respond-btn">Respond</button>
+                <button class="btn btn-outline-custom follow-up-btn">Send Follow-up</button>
+                <button class="btn btn-outline-custom mark-completed-btn">Mark Complete</button>
+              </div>
             </div>
           </div>
         </div>
@@ -294,7 +355,7 @@
           const values = Object.fromEntries(data.entries());
           const prayer = composePrayer(values).trim();
           prayerTextEl.textContent = prayer;
-          previewWrap.hidden = false;
+          previewWrap.classList.remove('d-none');
           copyBtn.disabled = false;
         });
 
@@ -478,7 +539,7 @@
 
         form.addEventListener('reset', function(){
           prayerTextEl.textContent = '';
-          previewWrap.hidden = true;
+          previewWrap.classList.add('d-none');
           copyBtn.disabled = true;
           sendBtn.disabled = true;
           sendBtn.classList.add('opacity-50');
@@ -492,8 +553,8 @@
         // Show management section with special key combination (Ctrl+Shift+P)
         document.addEventListener('keydown', function(e) {
           if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-            managementSection.hidden = !managementSection.hidden;
-            if (!managementSection.hidden) {
+            managementSection.classList.toggle('d-none');
+            if (!managementSection.classList.contains('d-none')) {
               refreshPrayerList();
             }
           }
@@ -520,9 +581,9 @@
             const badge = card.querySelector('.status-badge');
             badge.textContent = request.status;
             badge.classList.add(
-              request.status === 'new' ? 'bg-accent/20 text-accent' :
-              request.status === 'responded' ? 'bg-green-500/20 text-green-500' :
-              'bg-muted/20 text-muted'
+              request.status === 'new' ? 'bg-warning text-dark' :
+              request.status === 'responded' ? 'bg-success' :
+              'bg-secondary'
             );
 
             // Setup buttons
@@ -533,7 +594,7 @@
             const completeBtn = card.querySelector('.mark-completed-btn');
 
             respondBtn.onclick = () => {
-              responseArea.classList.toggle('hidden');
+              responseArea.classList.toggle('d-none');
               if (request.responseText) {
                 responseText.value = request.responseText;
               }
@@ -577,17 +638,50 @@
           });
         }
       })();
+
+      // Story Management
+      (function(){
+        const storiesContainer = document.getElementById('stories-container');
+        
+        async function loadStories() {
+          try {
+            const response = await fetch('assets/stories.json');
+            const stories = await response.json();
+            
+            storiesContainer.innerHTML = stories
+              .filter(story => story.status === 'approved')
+              .map(story => `
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">${story.title}</h5>
+                      <h6 class="card-subtitle mb-3 text-muted-custom">${story.author} • ${new Date(story.date).toLocaleDateString()}</h6>
+                      <p class="card-text">${story.body}</p>
+                    </div>
+                  </div>
+                </div>
+              `).join('');
+          } catch (error) {
+            console.error('Error loading stories:', error);
+            storiesContainer.innerHTML = '<div class="col-12"><p class="text-muted-custom">Stories will be displayed here.</p></div>';
+          }
+        }
+        
+        // Load stories on page load
+        loadStories();
+      })();
+    </script>
     </script>
   </section>
 
-  <footer class="container py-12">
-    <div class="text-center space-y-4">
-      <p class="text-small">© 2025 Creative Calling — A quiet path home</p>
-      <div class="flex justify-center gap-4">
-        <a href="#stories" class="link text-small">Stories</a>
-        <a href="#mysticism" class="link text-small">Wandering</a>
-        <a href="#testimonies" class="link text-small">Testimonies</a>
-        <a href="#resources" class="link text-small">Resources</a>
+  <footer class="container py-5">
+    <div class="text-center">
+      <p class="small mb-3">© 2025 Creative Calling — A quiet path home</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#stories" class="text-decoration-none small">Stories</a>
+        <a href="#mysticism" class="text-decoration-none small">Wandering</a>
+        <a href="#testimonies" class="text-decoration-none small">Testimonies</a>
+        <a href="#resources" class="text-decoration-none small">Resources</a>
       </div>
     </div>
   </footer>
@@ -595,9 +689,10 @@
   <!-- Back to top button -->
   <button 
     onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-    class="fixed bottom-8 right-8 bg-accent/90 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-accent transition-colors"
+    class="btn btn-custom position-fixed bottom-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center shadow back-to-top-btn"
     aria-label="Scroll to top">
     ↑
   </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
