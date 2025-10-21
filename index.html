@@ -4,25 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Calling — A Quiet Path Home</title>
-  <link rel="stylesheet" href="dist/uno.css">
+  <link rel="stylesheet" href="assets/css/site.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
     
-    body {
-      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-      background-color: #2f2f2f;
-      color: #e6e6e6;
+    :root {
+      --background: #1a1a1a;
+      --bg: #2f2f2f;
+      --text-main: #e6e6e6;
+      --text-muted: #b0b0b0;
+      --accent: #8aa7a1;
+      --accent-dark: #7a9791;
+      --border: #404040;
     }
-  </style>
-
+    
     body {
       font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      background-color: var(--bg);
+      color: var(--text-main);
       max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      line-height: 1.6;
     }
 
     h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
+      color: var(--text-main);
     }
+
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
 
     .muted {
       color: var(--text-muted);
@@ -30,6 +43,168 @@
 
     .text-center {
       text-align: center;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+    
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    
+    .text-xl {
+      font-size: 1.25rem;
+    }
+    
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mt-12 { margin-top: 3rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .pt-8 { padding-top: 2rem; }
+    .p-4 { padding: 1rem; }
+    
+    .space-y-2 > * + * { margin-top: 0.5rem; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-6 > * + * { margin-top: 1.5rem; }
+    .space-y-8 > * + * { margin-top: 2rem; }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    
+    .btn-outline:hover {
+      background-color: rgba(138, 167, 161, 0.1);
+    }
+    
+    .link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .link:hover {
+      text-decoration: underline;
+    }
+    
+    a.text-accent {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    a.text-accent:hover {
+      text-decoration: underline;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    
+    .w-full { width: 100%; }
+    .block { display: block; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .flex-wrap { flex-wrap: wrap; }
+    
+    .font-serif { font-family: Georgia, "Times New Roman", serif; }
+    .font-semibold { font-weight: 600; }
+    .italic { font-style: italic; }
+    .leading-relaxed { line-height: 1.7; }
+    
+    .opacity-50 { opacity: 0.5; }
+    .bg-transparent { background-color: transparent; }
+    
+    .border { border: 1px solid; }
+    .border-t { border-top: 1px solid; }
+    .border-b { border-bottom: 1px solid; }
+    .border-border { border-color: var(--border); }
+    .border-accent { border-color: var(--accent); }
+    .rounded-lg { border-radius: 8px; }
+    .rounded-full { border-radius: 50px; }
+    
+    .fixed { position: fixed; }
+    .bottom-8 { bottom: 2rem; }
+    .right-8 { right: 2rem; }
+    .w-12 { width: 3rem; }
+    .h-12 { height: 3rem; }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    
+    .bg-bg\/30 { background-color: rgba(47, 47, 47, 0.3); }
+    
+    @media (max-width: 700px) {
+      h1 { font-size: 1.8rem; }
+      .text-4xl { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -53,7 +228,99 @@
 
   <section id="testimonies" class="section container">
     <h2 class="text-2xl font-serif mb-4">Real Stories</h2>
-    <p class="text-lg leading-relaxed">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+    <p class="text-lg leading-relaxed mb-8">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+    
+    <!-- Example Story -->
+    <div class="story-card card mb-8">
+      <h3 class="text-xl font-serif mb-3">From Searching to Finding Peace</h3>
+      <p class="text-muted text-sm mb-4">Shared by the Creative Calling team</p>
+      <div class="space-y-4 leading-relaxed">
+        <p>
+          For years, I searched for meaning in all the wrong places — in achievements, in others' approval, 
+          in spiritual practices that promised power and enlightenment. Each path left me more empty than before.
+        </p>
+        <p>
+          One quiet evening, exhausted from striving, I simply prayed: "God, if You're real, please show me." 
+          What followed wasn't dramatic — no lightning, no visions. Just a gentle sense of being known, 
+          loved, and invited home.
+        </p>
+        <p>
+          Through reading Scripture and learning about Jesus, I discovered that what I'd been searching for 
+          had been searching for me all along. The God who created the universe cared about my restless heart. 
+          The peace I'd been chasing was found in simply resting in His presence.
+        </p>
+        <p class="italic">
+          "Come to me, all who labor and are heavy laden, and I will give you rest." — Matthew 11:28
+        </p>
+      </div>
+    </div>
+
+    <!-- Story Submission Section -->
+    <div class="mt-12 pt-8 border-t border-border">
+      <h3 class="text-xl font-serif mb-4">Share Your Story</h3>
+      <p class="text-lg mb-6">Have you experienced God's grace in your life? We'd love to hear your story. All submissions are reviewed before being shared.</p>
+      
+      <form id="story-form" action="https://formsubmit.co/your@email.com" method="POST" class="space-y-6">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="📖 New Story Submission">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you">
+        <!-- Prevent spam -->
+        <input type="text" name="_honey" style="display:none">
+        
+        <div class="space-y-2">
+          <label for="story-name" class="block text-muted font-semibold">Your Name (or how you'd like to be identified)</label>
+          <input id="story-name" name="name" type="text" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="e.g., Sarah from Texas, Anonymous, A grateful believer" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-email" class="block text-muted font-semibold">Your Email (for review communication only, not published)</label>
+          <input id="story-email" name="email" type="email" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="your.email@example.com" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-title" class="block text-muted font-semibold">Story Title</label>
+          <input id="story-title" name="title" type="text" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="e.g., Finding Hope in the Darkness" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-content" class="block text-muted font-semibold">Your Story</label>
+          <textarea id="story-content" name="story" rows="10" required
+                    class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                    placeholder="Share your testimony... How did you encounter God's grace? What changed in your life? What would you want others to know?"></textarea>
+          <p class="text-small text-muted">Please share authentically. We value genuine experiences over polished narratives.</p>
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-verse" class="block text-muted font-semibold">Meaningful Scripture (optional)</label>
+          <input id="story-verse" name="scripture" type="text"
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="e.g., Psalm 23:1-3, Romans 8:28" />
+        </div>
+
+        <div class="card bg-bg/30 p-4">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="story-consent" name="consent" class="mt-1" required>
+            <label for="story-consent" class="text-small">
+              I understand that my story will be reviewed for content and may be shared on this website 
+              to encourage others. My email address will not be published.
+            </label>
+          </div>
+        </div>
+
+        <div class="flex gap-4 flex-wrap">
+          <button type="submit" class="btn">Submit Story</button>
+          <button type="reset" class="btn bg-transparent border border-accent text-accent hover:bg-accent/10">Clear Form</button>
+        </div>
+      </form>
+    </div>
   </section>
 
   <section id="resources" class="section container">
@@ -129,6 +396,14 @@
         <input id="promise" name="promise" type="text" 
                class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
                placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
+      </div>
+
+      <div class="space-y-2">
+        <label for="email" class="block text-muted font-semibold">Your Email (for follow-up communication only)</label>
+        <input id="email" name="email" type="email" 
+               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               placeholder="your.email@example.com" />
+        <p class="text-small text-muted">We'll use this to send you a secure way to communicate about your prayer request.</p>
       </div>
 
       <!-- Secure communication token field -->
@@ -318,6 +593,7 @@
         const sendBtn = document.getElementById('send-btn');
         const shareCheckbox = document.getElementById('share-prayer');
         const form = document.getElementById('prayer-form');
+        const emailInput = document.getElementById('email');
 
         // Secure prayer request management system
         const PrayerManager = {
