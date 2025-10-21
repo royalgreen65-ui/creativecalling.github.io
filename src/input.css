@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-serif bg-bg text-text leading-relaxed;
+  }
+  h2 {
+    @apply font-heading text-text text-2xl mb-2;
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-transparent border border-accent text-accent px-[18px] py-[10px] rounded-md no-underline font-semibold hover:bg-accent hover:text-white transition-colors;
+  }
+  .button-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+}

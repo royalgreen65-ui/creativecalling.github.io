@@ -4,88 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Calling — A Quiet Path Home</title>
-  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <style>
+    :root {
+      --bg: #f6f3ef;      /* soft parchment */
+      --muted: #6b6b60;   /* warm gray */
+      --accent: #7b5e3c;  /* earth brown */
+      --accent2: #8aa7a1; /* soft green */
+      --text: #1f1b16;    /* deep charcoal */
+      --container: 900px;
+    }
+
+    body {
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero" role="banner">
-    <div class="container">
-      <h1 class="serene">Come home. Be still. Listen.</h1>
-      <p class="lead">A gentle invitation to rediscover the One who quietly holds you.</p>
-      <p class="verse">"Be still, and know that I am God." — Psalm 46:10</p>
-      <p><a href="#stories" class="button">Begin</a></p>
-    </div>
+  <header class="text-center" role="banner">
+    <h1>Come home. Be still. Listen.</h1>
+    <p class="muted">A gentle invitation to rediscover the One who quietly holds you.</p>
+    <p><em>"Be still, and know that I am God." — Psalm 46:10</em></p>
+    <p><a href="#stories">Begin</a></p>
   </header>
 
-  <section id="stories" class="container">
+  <section id="stories">
     <h2>Stories That Still Speak</h2>
     <p>From Genesis to Revelation, true stories that point to God's steady love.</p>
   </section>
 
-  <section id="mysticism" class="container">
+  <section id="mysticism">
     <h2>A Word on Wandering</h2>
     <p>Modern ways of self-exaltation promise power but leave the soul thirsty. We point instead toward humility, repentance, and rest.</p>
   </section>
 
-  <section id="testimonies" class="container">
+  <section id="testimonies">
     <h2>Real Stories</h2>
     <p>Accounts of redemption and the quiet work of grace in ordinary lives.</p>
   </section>
 
-  <section id="resources" class="container">
+  <section id="resources">
     <h2>Resources</h2>
-    <ul class="resource-list">
+    <ul>
       <li>
         <a href="https://www.mardel.com/bibletranslationguide" target="_blank" rel="noopener">Bible Translation Guide</a>
-        <p class="resource-desc">Start here! A helpful guide explaining different Bible translations, their reading levels, and translation philosophies to help you choose the right Bible for your needs.</p>
+        <p class="muted">Start here! A helpful guide explaining different Bible translations, their reading levels, and translation philosophies to help you choose the right Bible for your needs.</p>
       </li>
       <li>
         <a href="https://www.youversion.com/the-bible-app/" target="_blank" rel="noopener">YouVersion Bible App</a>
-        <p class="resource-desc">Free Bible app with multiple translations, reading plans, and daily devotionals. Available on all devices.</p>
+        <p class="muted">Free Bible app with multiple translations, reading plans, and daily devotionals. Available on all devices.</p>
       </li>
       <li>
         <a href="https://www.blueletterbible.org/" target="_blank" rel="noopener">Blue Letter Bible</a>
-        <p class="resource-desc">In-depth study tool with Greek/Hebrew lexicon, commentaries, and cross-references. Great for word studies.</p>
+        <p class="muted">In-depth study tool with Greek/Hebrew lexicon, commentaries, and cross-references. Great for word studies.</p>
       </li>
       <li>
         <a href="https://www.logos.com/" target="_blank" rel="noopener">Logos Bible Software</a>
-        <p class="resource-desc">Professional Bible study software with extensive library options, original language tools, and academic resources.</p>
+        <p class="muted">Professional Bible study software with extensive library options, original language tools, and academic resources.</p>
       </li>
     </ul>
   </section>
 
-  <section id="prayer" class="container">
+  <section id="prayer">
     <h2>Need Prayer?</h2>
     <p>Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
 
     <form id="prayer-form" aria-labelledby="prayer-heading">
-      <div class="field">
+      <p>
         <label for="who">Who or what is this prayer for?</label>
         <input id="who" name="who" type="text" placeholder="e.g., myself, my friend Anna, my family" />
-      </div>
+      </p>
 
-      <div class="field">
+      <p>
         <label for="need">What is the need or concern?</label>
         <input id="need" name="need" type="text" placeholder="e.g., healing, wisdom, provision" />
-      </div>
+      </p>
 
-      <div class="field">
+      <p>
         <label for="feeling">How are you feeling about this?</label>
         <input id="feeling" name="feeling" type="text" placeholder="e.g., anxious, grateful, confused" />
-      </div>
+      </p>
 
-      <div class="field">
+      <p>
         <label for="promise">Is there a Bible promise or hope you'd lean on (optional)?</label>
         <input id="promise" name="promise" type="text" placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
-      </div>
+      </p>
 
-      <div class="field actions">
-        <button type="button" id="preview-btn" class="button">Preview Prayer</button>
-        <button type="button" id="copy-btn" class="button" disabled>Copy Prayer</button>
-        <button type="reset" id="reset-btn" class="button">Reset</button>
-      </div>
+      <p>
+        <button type="button" id="preview-btn">Preview Prayer</button>
+        <button type="button" id="copy-btn" disabled>Copy Prayer</button>
+        <button type="reset" id="reset-btn">Reset</button>
+      </p>
     </form>
 
-    <div id="prayer-preview" aria-live="polite" class="prayer-preview" hidden>
+    <div id="prayer-preview" aria-live="polite" hidden>
       <h3>Your Prayer</h3>
       <blockquote id="prayer-text"></blockquote>
     </div>
@@ -148,8 +191,8 @@
     </script>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">© 2025 Creative Calling — A quiet path home</div>
+  <footer>
+    <p class="muted text-center">© 2025 Creative Calling — A quiet path home</p>
   </footer>
 </body>
 </html>
