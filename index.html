@@ -41,7 +41,97 @@
 
   <section id="prayer" class="container">
     <h2>Need Prayer?</h2>
-    <p>Email: <a href="mailto:prayer@yourdomain.com">prayer@yourdomain.com</a></p>
+    <p>Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
+
+    <form id="prayer-form" aria-labelledby="prayer-heading">
+      <div class="field">
+        <label for="who">Who or what is this prayer for?</label>
+        <input id="who" name="who" type="text" placeholder="e.g., myself, my friend Anna, my family" />
+      </div>
+
+      <div class="field">
+        <label for="need">What is the need or concern?</label>
+        <input id="need" name="need" type="text" placeholder="e.g., healing, wisdom, provision" />
+      </div>
+
+      <div class="field">
+        <label for="feeling">How are you feeling about this?</label>
+        <input id="feeling" name="feeling" type="text" placeholder="e.g., anxious, grateful, confused" />
+      </div>
+
+      <div class="field">
+        <label for="promise">Is there a Bible promise or hope you'd lean on (optional)?</label>
+        <input id="promise" name="promise" type="text" placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
+      </div>
+
+      <div class="field actions">
+        <button type="button" id="preview-btn" class="button">Preview Prayer</button>
+        <button type="button" id="copy-btn" class="button" disabled>Copy Prayer</button>
+        <button type="reset" id="reset-btn" class="button">Reset</button>
+      </div>
+    </form>
+
+    <div id="prayer-preview" aria-live="polite" class="prayer-preview" hidden>
+      <h3>Your Prayer</h3>
+      <blockquote id="prayer-text"></blockquote>
+    </div>
+
+    <script>
+      (function(){
+        const form = document.getElementById('prayer-form');
+        const previewBtn = document.getElementById('preview-btn');
+        const copyBtn = document.getElementById('copy-btn');
+        const prayerTextEl = document.getElementById('prayer-text');
+        const previewWrap = document.getElementById('prayer-preview');
+
+        function composePrayer(values){
+          const who = values.who || 'you';
+          const need = values.need ? ('for ' + values.need) : '';
+          const feeling = values.feeling ? ('feeling ' + values.feeling) : '';
+          const promise = values.promise ? ('We hold to the hope of ' + values.promise + '.') : '';
+
+          const lines = [];
+          lines.push(`Heavenly Father, we bring ${who} ${need}.`);
+          if(values.feeling) lines.push(`We acknowledge that they are ${values.feeling} and ask for Your comfort.`);
+          if(values.need) lines.push(`Please meet this need, provide wisdom, and surround them with Your peace.`);
+          if(values.promise) lines.push(promise);
+          lines.push('In Jesus\' name, amen.');
+
+          return lines.join('\n\n');
+        }
+
+        previewBtn.addEventListener('click', function(){
+          const data = new FormData(form);
+          const values = Object.fromEntries(data.entries());
+          const prayer = composePrayer(values).trim();
+          prayerTextEl.textContent = prayer;
+          previewWrap.hidden = false;
+          copyBtn.disabled = false;
+        });
+
+        copyBtn.addEventListener('click', function(){
+          const text = prayerTextEl.textContent;
+          if(!text) return;
+          navigator.clipboard && navigator.clipboard.writeText(text).then(function(){
+            copyBtn.textContent = 'Copied';
+            setTimeout(()=> copyBtn.textContent = 'Copy Prayer', 2000);
+          }, function(){
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            try{ document.execCommand('copy'); copyBtn.textContent = 'Copied'; }catch(e){}
+            ta.remove();
+            setTimeout(()=> copyBtn.textContent = 'Copy Prayer', 2000);
+          });
+        });
+
+        form.addEventListener('reset', function(){
+          prayerTextEl.textContent = '';
+          previewWrap.hidden = true;
+          copyBtn.disabled = true;
+        });
+      })();
+    </script>
   </section>
 
   <footer class="site-footer">
