@@ -1,64 +1,170 @@
-/* Section spacing */
-section {
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--border);
+/* Custom CSS for Creative Calling - Bootstrap Theme */
+
+/* Custom color scheme */
+:root {
+  --bg-dark: #2f2f2f;
+  --text-light: #e6e6e6;
+  --text-muted: #b0b0b0;
+  --accent: #8aa7a1;
+  --accent-dark: #7a9791;
+  --border-color: #404040;
 }
 
-/* Resource list */
-ul li {
-  margin-bottom: 1.5rem;
+/* Base body styling */
+body {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
 }
 
-ul li a {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+/* Override Bootstrap container to match design */
+.container {
+  max-width: 900px;
 }
 
-/* Prayer preview */
-#prayer-preview {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: var(--background);
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  color: var(--text-main);
+/* Typography overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-light);
 }
 
+/* Bootstrap text-muted override */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Section styling */
+.border-bottom {
+  border-color: var(--border-color) !important;
+}
+
+/* Custom button colors */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: rgba(138, 167, 161, 0.1);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Form controls with dark theme */
+.form-control,
+.form-select {
+  background-color: var(--bg-dark);
+  border-color: var(--border-color);
+  color: var(--text-light);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--bg-dark);
+  border-color: var(--accent);
+  color: var(--text-light);
+  box-shadow: 0 0 0 0.25rem rgba(138, 167, 161, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Card styling */
+.card {
+  background-color: rgba(47, 47, 47, 0.5);
+  border-color: var(--border-color);
+  color: var(--text-light);
+}
+
+.card:hover {
+  border-color: rgba(138, 167, 161, 0.5);
+}
+
+.bg-light {
+  background-color: rgba(64, 64, 64, 0.3) !important;
+}
+
+/* Link colors */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* Prayer preview styling */
 #prayer-preview blockquote {
   white-space: pre-wrap;
   margin: 0;
-  font-style: normal;
+}
+
+/* Badge colors for prayer status */
+.badge.bg-primary {
+  background-color: var(--accent) !important;
+}
+
+.badge.bg-success {
+  background-color: #5a9f7a !important;
+}
+
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Form check (checkbox) styling */
+.form-check-input {
+  background-color: var(--bg-dark);
+  border-color: var(--border-color);
+}
+
+.form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.form-check-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(138, 167, 161, 0.25);
 }
 
 /* Responsive adjustments */
-@media (max-width: 700px) {
-  h1 {
-    font-size: 1.8rem;
+@media (max-width: 768px) {
+  h1, .display-4 {
+    font-size: 2rem;
   }
   
-  section {
-    padding: 1.5rem 0;
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
-/* Button styles */
-button {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
-  min-width: 120px;
-  text-align: center;
+/* Button focus and active states */
+button:focus {
+  outline: none;
 }
 
 button:active {
   transform: translateY(1px);
 }
 
-/* Reset button width on mobile but keep pill shape */
-@media (max-width: 480px) {
-  form button {
-    width: 100%;
-    margin-bottom: 0.5rem;
-    border-radius: 50px !important;
-  }
+/* Smooth transitions */
+.btn,
+.card,
+a {
+  transition: all 0.2s ease-in-out;
 }
