@@ -3,45 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Form</title>
+    <title>Share Your Prayer Request</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .honeypot { display: none; }
+        body {
+            background-color: #2f2f2f;
+            font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+            color: #e6e6e6;
+        }
+        .card {
+            background-color: #363636;
+            border-color: #404040;
+        }
+        .form-control {
+            background-color: #363636;
+            border-color: #404040;
+            color: #e6e6e6;
+        }
+        .form-control:focus {
+            background-color: #363636;
+            border-color: #8aa7a1;
+            color: #e6e6e6;
+            box-shadow: 0 0 0 0.25rem rgba(138, 167, 161, 0.25);
+        }
+        .form-control::placeholder {
+            color: #b0b0b0;
+        }
+        .form-label {
+            color: #e6e6e6;
+        }
+        .btn-custom {
+            background-color: #8aa7a1;
+            border-color: #8aa7a1;
+            color: white;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+        .btn-custom:hover {
+            background-color: #7a9791;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .text-muted-custom {
+            color: #b0b0b0 !important;
+        }
     </style>
 </head>
 <body class="bg-light">
     <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title mb-4">Test Form</h2>
+                        <h2 class="card-title text-center mb-4">Share Your Prayer Request</h2>
+                        <p class="text-center mb-4">We're here to pray with you. Your request will be treated with care and confidence.</p>
                         <form action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
-                            <!-- Basic FormSubmit.co setup -->
-                            <input type="hidden" name="_subject" value="Test Form Submission">
+                            <!-- FormSubmit.co configuration -->
+                            <input type="hidden" name="_subject" value="Prayer Request from Creative Calling">
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you.html">
-                            <!-- Keep captcha enabled for better spam protection -->
                             <input type="hidden" name="_captcha" value="true">
-                            <!-- Honeypot to prevent spam -->
                             <input type="text" name="_honey" class="honeypot" tabindex="-1" aria-hidden="true">
-
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                            
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Your Name (optional)</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Leave blank to remain anonymous">
                             </div>
 
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required
+                                    placeholder="We'll send prayer updates here">
+                                <div class="form-text text-muted-custom">Your email is kept private and only used for prayer follow-ups</div>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            <div class="mb-4">
+                                <label for="prayer_type" class="form-label">Type of Prayer Request <span class="text-danger">*</span></label>
+                                <select class="form-control" id="prayer_type" name="prayer_type" required>
+                                    <option value="">Please select...</option>
+                                    <option value="Healing">Physical or Emotional Healing</option>
+                                    <option value="Guidance">Wisdom and Guidance</option>
+                                    <option value="Relationship">Relationship or Family</option>
+                                    <option value="Provision">Financial or Material Needs</option>
+                                    <option value="Spiritual">Spiritual Growth</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Send Test Message</button>
+                            <div class="mb-4">
+                                <label for="prayer_request" class="form-label">Your Prayer Request <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="prayer_request" name="prayer_request" rows="6" required
+                                    placeholder="Share your prayer need in detail. Feel free to include relevant background or specific requests..."></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="scripture" class="form-label">Scripture Verse (optional)</label>
+                                <input type="text" class="form-control" id="scripture" name="scripture"
+                                    placeholder="Any Bible verse that's meaningful to you in this situation">
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="urgent" name="urgent" value="yes">
+                                    <label class="form-check-label" for="urgent">
+                                        This is an urgent prayer request
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-custom">Send Prayer Request</button>
+                            </div>
                         </form>
                     </div>
                 </div>
