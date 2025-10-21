@@ -54,6 +54,8 @@
   <section id="testimonies" class="section container">
     <h2 class="text-2xl font-serif mb-4">Real Stories</h2>
     <p class="text-lg leading-relaxed">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+    <!-- Published stories will be rendered here from assets/stories.json -->
+    <div id="published-stories" class="mt-6 space-y-6" aria-live="polite"></div>
   </section>
 
   <section id="resources" class="section container">
@@ -101,7 +103,7 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you">
       <!-- Prevent spam -->
-      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_honey">
       
       <div class="space-y-2">
         <label for="who" class="block text-muted font-semibold">Who or what is this prayer for?</label>
@@ -599,5 +601,39 @@
     aria-label="Scroll to top">
     ↑
   </button>
+  <!-- Stories renderer -->
+  <script>
+    (function(){
+      const container = document.getElementById('published-stories');
+      if(!container) return;
+
+      fetch('/assets/stories.json')
+        .then(r => r.ok ? r.json() : Promise.reject('Failed to load stories'))
+        .then(stories => {
+          const approved = (stories || []).filter(s => s.status === 'approved');
+          if(!approved.length) {
+            container.innerHTML = '<p class="text-muted">No stories have been published yet. Be the first to share.</p>';
+            return;
+          }
+
+          container.innerHTML = approved.map(s => `
+            <article class="story-card">
+              <h3 class="text-lg font-semibold">${escapeHtml(s.title || 'Story')}</h3>
+              <p class="text-small text-muted">${escapeHtml(s.author || '')} — ${escapeHtml(s.date || '')}</p>
+              <div class="mt-3">${escapeHtml(s.body).replace(/\n/g, '<br>')}</div>
+            </article>
+          `).join('');
+        })
+        .catch(err => {
+          container.innerHTML = '<p class="text-muted">Unable to load stories.</p>';
+          console.error(err);
+        });
+
+      function escapeHtml(s){
+        if(!s) return '';
+        return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c]));
+      }
+    })();
+  </script>
 </body>
 </html>
