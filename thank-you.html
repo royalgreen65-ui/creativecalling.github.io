@@ -9,16 +9,24 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
         
+        :root {
+          --background: #363636;
+          --border: #404040;
+          --text-main: #e6e6e6;
+          --text-muted: #b0b0b0;
+          --accent: #8aa7a1;
+        }
+
         body {
             font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
             background-color: #2f2f2f;
-            color: #e6e6e6;
+            color: var(--text-main);
             min-height: 100vh;
         }
 
         .btn-custom {
-            background-color: #8aa7a1;
-            border-color: #8aa7a1;
+            background-color: var(--accent);
+            border-color: var(--accent);
             color: white;
             border-radius: 50px;
             padding: 0.5rem 1.5rem;
@@ -32,7 +40,7 @@
         }
 
         .text-muted-custom {
-            color: #b0b0b0 !important;
+            color: var(--text-muted) !important;
         }
     </style>
 </head>

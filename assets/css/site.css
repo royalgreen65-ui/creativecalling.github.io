@@ -1,3 +1,12 @@
+/* Custom properties for consistent theming */
+:root {
+  --background: #363636;
+  --border: #404040;
+  --text-main: #e6e6e6;
+  --text-muted: #b0b0b0;
+  --accent: #8aa7a1;
+}
+
 /* Section spacing */
 section {
   padding: 2rem 0;
@@ -13,6 +22,11 @@ ul li a {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: var(--accent) !important;
+}
+
+ul li a:hover {
+  color: #9bb7b1 !important;
 }
 
 /* Prayer preview */
@@ -31,12 +45,72 @@ ul li a {
   font-style: normal;
 }
 
+/* Form elements */
+.form-control {
+  background-color: var(--background) !important;
+  border-color: var(--border) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control:focus {
+  background-color: var(--background) !important;
+  border-color: var(--accent) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Card styling */
+.card {
+  background-color: var(--background) !important;
+  border-color: var(--border) !important;
+  color: var(--text-main) !important;
+}
+
+.card-title, .card-text, .card-subtitle {
+  color: var(--text-main) !important;
+}
+
+.card-subtitle {
+  color: var(--text-muted) !important;
+}
+
+/* Badge styling */
+.badge {
+  color: var(--text-main) !important;
+}
+
+/* Link styling */
+a {
+  color: var(--accent) !important;
+}
+
+a:hover {
+  color: #9bb7b1 !important;
+}
+
+/* Ensure all text has proper contrast */
+* {
+  color: var(--text-main);
+}
+
+/* Override Bootstrap defaults that might cause contrast issues */
+.text-muted, .text-secondary {
+  color: var(--text-muted) !important;
+}
+
+.text-dark, .text-black {
+  color: var(--text-main) !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 700px) {
   h1 {
     font-size: 1.8rem;
   }
-  
+
   section {
     padding: 1.5rem 0;
   }
