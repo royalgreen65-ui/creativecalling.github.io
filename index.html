@@ -54,6 +54,78 @@
   <section id="testimonies" class="section container">
     <h2 class="text-2xl font-serif mb-4">Real Stories</h2>
     <p class="text-lg leading-relaxed">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+    <!-- Published stories will be rendered here from assets/stories.json -->
+    <div id="published-stories" class="mt-6 space-y-6" aria-live="polite"></div>
+
+    <!-- Story Submission Form -->
+    <div class="mt-12 border-t border-border pt-8">
+      <h3 class="text-xl font-serif mb-4">Share Your Story</h3>
+      <p class="text-muted mb-6">Have a story of grace, redemption, or answered prayer? We'd love to hear it. All submissions are reviewed before publishing to ensure they align with the ministry's values.</p>
+      
+      <form id="story-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST" class="space-y-6">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="📖 New Story Submission">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://royalgreen65-ui.github.io/creativecalling.github.io/thank-you.html">
+        <input type="hidden" name="_honey">
+        
+        <div class="space-y-2">
+          <label for="story-title" class="block text-muted font-semibold">Story Title</label>
+          <input id="story-title" name="title" type="text" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="e.g., From Darkness to Light" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-author" class="block text-muted font-semibold">Your Name (or "Anonymous")</label>
+          <input id="story-author" name="author" type="text" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="e.g., Sarah M. or Anonymous" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-email" class="block text-muted font-semibold">Your Email (for review communication only)</label>
+          <input id="story-email" name="email" type="email" required
+                 class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                 placeholder="your@email.com" />
+          <p class="text-small">Your email will not be published or shared.</p>
+        </div>
+
+        <div class="space-y-2">
+          <label for="story-body" class="block text-muted font-semibold">Your Story</label>
+          <textarea id="story-body" name="story" rows="8" required
+                    class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+                    placeholder="Share your testimony, answered prayer, or story of God's grace in your life..."></textarea>
+          <p class="text-small">Please be authentic and respectful. Stories should point to God's work, not self-promotion.</p>
+        </div>
+
+        <div class="card bg-bg/30 p-4">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="story-consent" name="consent" class="mt-1" required>
+            <label for="story-consent" class="text-small">
+              I give permission for my story to be published on Creative Calling after review. I understand that 
+              the story may be edited for clarity and length while preserving its message. My email will remain private.
+            </label>
+          </div>
+        </div>
+
+        <div class="flex gap-4 flex-wrap">
+          <button type="button" id="story-preview-btn" class="btn">Preview Story</button>
+          <button type="submit" id="story-submit-btn" class="btn-outline">Submit for Review</button>
+          <button type="reset" id="story-reset-btn" class="btn bg-transparent border border-accent text-accent hover:bg-accent/10">Clear Form</button>
+        </div>
+      </form>
+
+      <div id="story-preview" class="card mt-8" hidden>
+        <h3 class="text-xl font-serif mb-4">Story Preview</h3>
+        <div class="story-card">
+          <h4 id="preview-title" class="text-lg font-semibold mb-2"></h4>
+          <p id="preview-author" class="text-small text-muted mb-3"></p>
+          <div id="preview-body" class="leading-relaxed"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="resources" class="section container">
@@ -94,14 +166,14 @@
     <h2 class="text-2xl font-serif mb-4">Need Prayer?</h2>
     <p class="text-lg mb-8">Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
 
-    <form id="prayer-form" action="https://formsubmit.co/your@email.com" method="POST" class="space-y-6">
+    <form id="prayer-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST" class="space-y-6">
       <!-- FormSubmit configuration -->
       <input type="hidden" name="_subject" value="🙏 New Prayer Request">
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you">
+      <input type="hidden" name="_next" value="https://royalgreen65-ui.github.io/creativecalling.github.io/thank-you.html">
       <!-- Prevent spam -->
-      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_honey">
       
       <div class="space-y-2">
         <label for="who" class="block text-muted font-semibold">Who or what is this prayer for?</label>
@@ -129,6 +201,14 @@
         <input id="promise" name="promise" type="text" 
                class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
                placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
+      </div>
+
+      <div class="space-y-2">
+        <label for="prayer-email" class="block text-muted font-semibold">Your Email (for prayer follow-up)</label>
+        <input id="prayer-email" name="email" type="email" 
+               class="w-full bg-bg border border-border rounded-lg px-4 py-2" 
+               placeholder="your@email.com" />
+        <p class="text-small">Required if you'd like us to follow up on your prayer request.</p>
       </div>
 
       <!-- Secure communication token field -->
@@ -412,6 +492,9 @@
         // Initialize prayer manager
         PrayerManager.init();
 
+        // Get email input element
+        const emailInput = document.getElementById('prayer-email');
+
         function updateSendButton() {
           const canSend = shareCheckbox.checked && emailInput.value.includes('@');
           sendBtn.disabled = !canSend;
@@ -599,5 +682,104 @@
     aria-label="Scroll to top">
     ↑
   </button>
+  <!-- Stories renderer -->
+  <script>
+    (function(){
+      const container = document.getElementById('published-stories');
+      if(!container) return;
+
+      fetch('/assets/stories.json')
+        .then(r => r.ok ? r.json() : Promise.reject('Failed to load stories'))
+        .then(stories => {
+          const approved = (stories || []).filter(s => s.status === 'approved');
+          if(!approved.length) {
+            container.innerHTML = '<p class="text-muted">No stories have been published yet. Be the first to share.</p>';
+            return;
+          }
+
+          container.innerHTML = approved.map(s => `
+            <article class="story-card">
+              <h3 class="text-lg font-semibold">${escapeHtml(s.title || 'Story')}</h3>
+              <p class="text-small text-muted">${escapeHtml(s.author || '')} — ${escapeHtml(s.date || '')}</p>
+              <div class="mt-3">${escapeHtml(s.body).replace(/\n/g, '<br>')}</div>
+            </article>
+          `).join('');
+        })
+        .catch(err => {
+          container.innerHTML = '<p class="text-muted">Unable to load stories.</p>';
+          console.error(err);
+        });
+
+      function escapeHtml(s){
+        if(!s) return '';
+        return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c]));
+      }
+    })();
+  </script>
+
+  <!-- Story submission form handler -->
+  <script>
+    (function(){
+      const storyForm = document.getElementById('story-form');
+      const previewBtn = document.getElementById('story-preview-btn');
+      const submitBtn = document.getElementById('story-submit-btn');
+      const previewSection = document.getElementById('story-preview');
+      
+      if (!storyForm || !previewBtn) return;
+
+      // Escape HTML to prevent XSS
+      function escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      // Preview story before submission
+      previewBtn.addEventListener('click', function() {
+        const title = document.getElementById('story-title').value;
+        const author = document.getElementById('story-author').value;
+        const body = document.getElementById('story-body').value;
+        
+        if (!title || !author || !body) {
+          alert('Please fill in all required fields before previewing.');
+          return;
+        }
+
+        // Update preview
+        document.getElementById('preview-title').textContent = title;
+        document.getElementById('preview-author').textContent = author + ' — ' + new Date().toLocaleDateString();
+        document.getElementById('preview-body').innerHTML = escapeHtml(body).replace(/\n/g, '<br>');
+        
+        // Show preview
+        previewSection.hidden = false;
+        
+        // Scroll to preview
+        previewSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+
+      // Handle form submission
+      storyForm.addEventListener('submit', function(e) {
+        const consent = document.getElementById('story-consent');
+        
+        if (!consent.checked) {
+          e.preventDefault();
+          alert('Please check the consent box to submit your story.');
+          return;
+        }
+
+        // Show confirmation
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+      });
+
+      // Handle form reset
+      storyForm.addEventListener('reset', function() {
+        previewSection.hidden = true;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit for Review';
+      });
+    })();
+  </script>
 </body>
 </html>
