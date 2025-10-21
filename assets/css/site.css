@@ -1,7 +1,7 @@
 /* Section spacing */
 section {
   padding: 2rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid var(--border);
 }
 
 /* Resource list */
@@ -22,6 +22,7 @@ ul li a {
   background: var(--background);
   border-radius: 6px;
   border: 1px solid var(--border);
+  color: var(--text-main);
 }
 
 #prayer-preview blockquote {
@@ -41,9 +42,23 @@ ul li a {
   }
 }
 
+/* Button styles */
+button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  min-width: 120px;
+  text-align: center;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Reset button width on mobile but keep pill shape */
 @media (max-width: 480px) {
   form button {
     width: 100%;
     margin-bottom: 0.5rem;
+    border-radius: 50px !important;
   }
 }

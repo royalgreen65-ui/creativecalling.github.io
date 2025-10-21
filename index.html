@@ -7,13 +7,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <style>
     :root {
-      --background-body: #f6f3ef;  /* soft parchment */
-      --text-muted: #6b6b60;      /* warm gray */
-      --links: #7b5e3c;           /* earth brown */
-      --focus: #8aa7a1;           /* soft green */
-      --text-main: #1f1b16;       /* deep charcoal */
-      --button-base: #7b5e3c;     /* earth brown for buttons */
-      --button-hover: #6b503c;    /* slightly darker brown for hover */
+      --background-body: #2f2f2f;  /* dark gray background */
+      --background: #363636;       /* slightly lighter gray for elements */
+      --text-main: #e6e6e6;       /* light gray text */
+      --text-bright: #ffffff;      /* bright white for headings */
+      --text-muted: #b0b0b0;      /* muted light gray */
+      --links: #8aa7a1;           /* soft green for links */
+      --focus: #7b5e3c;           /* earth brown for focus */
+      --button-base: #8aa7a1;     /* soft green for buttons */
+      --button-hover: #7a9791;    /* darker green for hover */
+      --border: #404040;          /* slightly lighter than background for borders */
+    }
+
+    button {
+      border-radius: 50px;  /* pill shape */
+      padding: 0.5rem 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
     }
 
     body {
