@@ -191,10 +191,11 @@
       <!-- FormSubmit configuration -->
       <input type="hidden" name="_subject" value="Prayer Request">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://royalgreen65-ui.github.io/creativecalling.github.io/thank-you.html">
+      <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you.html">
       <!-- Prevent spam -->
       <input type="text" name="_honey" class="honeypot" aria-hidden="true" tabindex="-1">
+      <!-- Keep captcha enabled for better spam protection -->
+      <input type="hidden" name="_captcha" value="true">
       
       <div class="mb-3">
         <label for="who" class="form-label fw-semibold text-muted-custom">Who or what is this prayer for?</label>
