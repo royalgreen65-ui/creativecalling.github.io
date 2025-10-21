@@ -4,24 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - Creative Calling</title>
-    <link rel="stylesheet" href="dist/uno.css">
+    <link rel="stylesheet" href="assets/css/site.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
+        
+        :root {
+            --background: #1a1a1a;
+            --bg: #2f2f2f;
+            --text-main: #e6e6e6;
+            --text-muted: #b0b0b0;
+            --accent: #8aa7a1;
+            --accent-dark: #7a9791;
+            --border: #404040;
+        }
+        
         body {
             font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-            background-color: #2f2f2f;
-            color: #e6e6e6;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 1.875rem;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--text-main);
+            margin: 0 0 1rem 0;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            margin: 0;
+        }
+        
+        .text-muted {
+            color: var(--text-muted);
+        }
+        
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <div class="container min-h-screen flex items-center justify-center">
-        <div class="text-center space-y-6 max-w-2xl">
-            <h1 class="text-3xl font-serif">Thank You for Sharing Your Prayer Request</h1>
-            <p class="text-lg">Your prayer request has been received. We will pray for your need and send you a secure way to communicate about your request.</p>
-            <p class="text-muted">For privacy and security, all communication will happen through a secure form system.</p>
-            <div class="mt-8">
-                <a href="/" class="btn">Return Home</a>
-            </div>
+    <div class="container">
+        <div class="space-y-6">
+            <h1>Thank You for Sharing</h1>
+            <p>Your submission has been received. We appreciate you taking the time to share with us.</p>
+            <p class="text-muted">For prayer requests, we will send you a secure way to communicate. For story submissions, we will review your story and be in touch soon.</p>
+            <a href="/" class="btn">Return Home</a>
         </div>
     </div>
 </body>

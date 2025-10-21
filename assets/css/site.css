@@ -62,3 +62,45 @@ button:active {
     border-radius: 50px !important;
   }
 }
+
+/* Story card styles */
+.story-card {
+  background: var(--background, #1a1a1a);
+  border: 1px solid var(--border, #444);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.story-card h3 {
+  color: var(--text-main, #e6e6e6);
+  margin-bottom: 0.5rem;
+}
+
+.story-card p {
+  line-height: 1.7;
+}
+
+/* Card utility class */
+.card {
+  background: var(--background, #1a1a1a);
+  border: 1px solid var(--border, #444);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Form textarea styles */
+textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 200px;
+}
+
+/* Text utilities */
+.text-small {
+  font-size: 0.875rem;
+}
+
+.leading-relaxed {
+  line-height: 1.7;
+}
