@@ -183,11 +183,15 @@
     </ul>
   </section>
 
-  <section id="prayer" class="py-5 container">
+  <section id="prayer" class="py-5 container text-center">
     <h2 class="display-5 mb-4">Need Prayer?</h2>
-    <p class="lead mb-4">Fill out the short prompts below and we'll help you shape a prayer. Your prayer stays in your browser — nothing is sent to a server.</p>
+    <p class="lead mb-4">We're here to pray with you. Share your prayer requests confidentially and receive caring support.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="prayer.html" class="btn btn-custom">Share Prayer Request</a>
+    </div>
+  </section>
 
-    <form id="prayer-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
+  <script action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
       <!-- FormSubmit configuration -->
       <input type="hidden" name="_subject" value="Prayer Request">
       <input type="hidden" name="_template" value="table">
@@ -304,8 +308,6 @@
     </div>
 
     <script>
-      (function(){
-        // DOM Elements
         const prayerForm = document.getElementById('prayer-form');
         const previewBtn = document.getElementById('preview-btn');
         const copyBtn = document.getElementById('copy-btn');
