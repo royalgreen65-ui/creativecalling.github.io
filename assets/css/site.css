@@ -40,6 +40,27 @@ a{color:var(--accent-2)}
 /* Footer */
 .site-footer{padding:28px 0;margin-top:24px;color:var(--muted);font-size:0.95rem}
 
+/* Resource List Styles */
+.resource-list li {
+  margin-bottom: 20px;
+}
+.resource-list a {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.resource-list a:hover {
+  text-decoration: underline;
+}
+.resource-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* Responsive */
 @media (max-width:700px){
   .serene{font-size:1.6rem}
