@@ -2,9 +2,12 @@
   {
     "id": "story-1",
     "author": "Anonymous",
-    "date": "2025-01-15",
+    "dateSubmitted": "2025-01-15T10:30:00Z",
+    "dateApproved": "2025-01-15T14:45:00Z",
     "title": "Finding Peace in the Storm",
     "body": "In the midst of life's chaos, I discovered that true peace comes not from controlling circumstances, but from trusting in God's unchanging character. When everything around me was falling apart, His presence became my anchor.",
-    "status": "approved"
+    "status": "approved",
+    "scripture": "Philippians 4:7",
+    "tags": ["peace", "trust", "faith"]
   }
 ]
