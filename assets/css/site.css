@@ -105,6 +105,11 @@ a:hover {
   color: var(--text-main) !important;
 }
 
+/* Video embed styling */
+.ratio iframe {
+  border-radius: 6px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 700px) {
   h1 {
