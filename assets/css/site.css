@@ -105,6 +105,38 @@ a:hover {
   color: var(--text-main) !important;
 }
 
+/* Wandering section styling */
+.wandering-card {
+  border-width: 2px !important;
+}
+
+.scripture-section {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+.scripture-heading {
+  color: var(--accent) !important;
+}
+
+.accent-heading {
+  color: var(--accent) !important;
+}
+
+.reflection-card {
+  transition: transform 0.2s ease;
+}
+
+.reflection-card:hover {
+  transform: translateY(-4px);
+}
+
+.closing-prayer {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  font-size: 1.1rem;
+}
+
 /* Video embed styling */
 .ratio iframe {
   border-radius: 6px;
