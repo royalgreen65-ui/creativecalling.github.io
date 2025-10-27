@@ -258,85 +258,85 @@
     </ul>
   </section>
 
-  <section id="prayer" class="py-5 container text-center">
-    <h2 class="display-5 mb-4">Need Prayer?</h2>
-    <p class="lead mb-4">We're here to pray with you. Share your prayer requests confidentially and receive caring support.</p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="prayer.html" class="btn btn-custom">Share Prayer Request</a>
-    </div>
-  </section>
-
-  <form id="prayer-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
-      <!-- FormSubmit configuration -->
-      <input type="hidden" name="_subject" value="Prayer Request">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you.html">
-      <!-- Prevent spam -->
-      <input type="text" name="_honey" class="honeypot" aria-hidden="true" tabindex="-1">
-      <!-- Keep captcha enabled for better spam protection -->
-      <input type="hidden" name="_captcha" value="true">
-      
-      <div class="mb-3">
-        <label for="who" class="form-label fw-semibold text-muted-custom">Who or what is this prayer for?</label>
-        <input id="who" name="who" type="text" required
-               class="form-control bg-custom border-custom" 
-               placeholder="e.g., myself, my friend Anna, my family" />
-      </div>
-
-      <div class="mb-3">
-        <label for="need" class="form-label fw-semibold text-muted-custom">What is the need or concern?</label>
-        <input id="need" name="need" type="text" required
-               class="form-control bg-custom border-custom" 
-               placeholder="e.g., healing, wisdom, provision" />
-      </div>
-
-      <div class="mb-3">
-        <label for="feeling" class="form-label fw-semibold text-muted-custom">How are you feeling about this?</label>
-        <input id="feeling" name="feeling" type="text" required
-               class="form-control bg-custom border-custom" 
-               placeholder="e.g., anxious, grateful, confused" />
-      </div>
-
-      <div class="mb-3">
-        <label for="promise" class="form-label fw-semibold text-muted-custom">Is there a Bible promise or hope you'd lean on (optional)?</label>
-        <input id="promise" name="promise" type="text" 
-               class="form-control bg-custom border-custom" 
-               placeholder="e.g., God's presence, Psalm 23, peace beyond understanding" />
-      </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label fw-semibold text-muted-custom">Your Email (for response and follow-up)</label>
-        <input id="email" name="_replyto" type="email" required
-               class="form-control bg-custom border-custom" 
-               autocomplete="email"
-               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-               placeholder="your.email@example.com" />
-        <div class="text-muted-custom small mt-1">
-          <i class="bi bi-shield-lock"></i>
-          Your email is protected and only used for prayer responses
+  <section id="prayer" class="py-5 container">
+    <h2 class="display-5 mb-4">Share Your Prayer Request</h2>
+    <p class="lead mb-4">Accounts of God's faithfulness begin with prayer. Share your heart with us.</p>
+    
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Recently Answered Prayers</h5>
+            <h6 class="card-subtitle mb-3 text-muted-custom">Anonymous • Matthew 7:7</h6>
+            <p class="card-text mb-4">
+              "Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you."
+              Join our community of prayer warriors as we lift each other up in faith and love.
+            </p>
+            <p class="small text-muted-custom">
+              Your privacy is important to us. All prayer requests are held in strict confidence.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Secure communication token field -->
-      <input type="hidden" name="prayer_token" id="prayer_token">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <form id="prayer-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="Prayer Request">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you.html">
+              <input type="text" name="_honey" class="honeypot" aria-hidden="true" tabindex="-1">
+              <input type="hidden" name="_captcha" value="true">
 
-      <div class="card bg-custom p-3 mb-4">
-        <div class="d-flex align-items-start gap-3">
-          <input type="checkbox" id="share-prayer" name="request_followup" class="form-check-input mt-1" required>
-          <label for="share-prayer" class="form-check-label small">
-            Yes, I would like prayer support and follow-up. I understand that my request will be kept confidential 
-            and I'll receive a secure way to communicate back and forth about my prayer request.
-          </label>
-        </div>
-      </div>
+              <div class="mb-4">
+                <label for="who" class="form-label h6">Your Name (Optional)</label>
+                <input id="who" name="who" type="text"
+                       class="form-control bg-custom border-custom" 
+                       placeholder="Share your name or remain anonymous"
+                       aria-label="Your name" />
+              </div>
 
-      <div class="d-flex gap-2 flex-wrap mb-4">
-        <button type="button" id="preview-btn" class="btn btn-custom">Preview Prayer</button>
-        <button type="button" id="copy-btn" class="btn btn-outline-custom opacity-50" disabled>Copy Prayer</button>
-        <button type="submit" id="send-btn" class="btn btn-outline-custom">Submit Prayer Request</button>
-        <button type="reset" id="reset-btn" class="btn btn-outline-custom">Reset</button>
-      </div>
-    </form>
+              <div class="mb-4">
+                <label for="need" class="form-label h6">Your Prayer Request</label>
+                <textarea id="need" name="need" required rows="4"
+                         class="form-control bg-custom border-custom" 
+                         placeholder="Share your heart. What would you like us to pray for?"
+                         aria-label="Your prayer request"></textarea>
+              </div>
+
+              <div class="mb-4">
+                <label for="promise" class="form-label h6">Scripture That Brings You Hope (Optional)</label>
+                <input id="promise" name="promise" type="text" 
+                       class="form-control bg-custom border-custom" 
+                       placeholder="Any Bible verse you're holding onto"
+                       aria-label="Scripture reference" />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label h6">Email for Follow-up</label>
+                <input id="email" name="_replyto" type="email" required
+                       class="form-control bg-custom border-custom" 
+                       placeholder="We'll send you prayer updates and encouragement"
+                       aria-label="Your email address" />
+                <div class="text-muted-custom small mt-2">
+                  Your email is protected and only used for prayer correspondence
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input type="checkbox" id="share-prayer" name="request_followup" 
+                       class="form-check-input" required>
+                <label for="share-prayer" class="form-check-label small">
+                  Yes, please pray for me and send encouraging follow-ups
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-custom w-100">
+                Share Prayer Request
+              </button>
+            </form>
 
     <div id="prayer-preview" class="card mt-4 d-none" aria-live="polite">
       <div class="card-body">
@@ -384,166 +384,27 @@
 
     <script>
         const prayerForm = document.getElementById('prayer-form');
-        const previewBtn = document.getElementById('preview-btn');
-        const copyBtn = document.getElementById('copy-btn');
-        const prayerTextEl = document.getElementById('prayer-text');
-        const previewWrap = document.getElementById('prayer-preview');
-        const tokenInput = document.getElementById('prayer_token');
-
-        // Prayer templates for different situations
-        const prayerTemplates = {
-          praise: [
-            "We praise You for Your faithfulness that never fails.",
-            "Your love endures forever, and Your mercies are new every morning.",
-            "You are our rock and our fortress, our ever-present help in times of need."
-          ],
-          comfort: [
-            "May Your peace that surpasses all understanding guard their heart and mind.",
-            "Let them feel Your presence in a tangible way today.",
-            "Wrap them in Your comfort as a shepherd carries a lamb."
-          ],
-          guidance: [
-            "Light their path with Your wisdom and truth.",
-            "Show them Your way and guide their steps.",
-            "Grant them discernment to know Your will."
-          ],
-          healing: [
-            "We ask for Your healing touch, both physically and spiritually.",
-            "Restore what is broken and bring wholeness where there is pain.",
-            "Let Your healing presence flow through every part of their being."
-          ]
-        };
-
-        function getEmotionalResponse(feeling) {
-          const emotions = {
-            anxious: ["peace that surpasses understanding", "calm in the storm", "rest in Your presence"],
-            worried: ["trust in Your provision", "confidence in Your care", "freedom from fear"],
-            grateful: ["continued thankfulness", "joy in Your goodness", "appreciation of Your blessings"],
-            hopeful: ["strengthened faith", "renewed spirit", "continued hope in Your promises"],
-            sad: ["comfort in sorrow", "joy in the morning", "healing for the heartbroken"],
-            confused: ["clarity of mind", "wisdom for decisions", "understanding of Your will"]
-          };
-
-          // Find the best matching emotion or default to general comfort
-          const match = Object.entries(emotions).find(([key]) => 
-            feeling.toLowerCase().includes(key)
-          );
-          return match ? match[1][Math.floor(Math.random() * match[1].length)] : "peace and clarity";
-        }
-
-        function composePrayer(values){
-          const who = values.who || 'this person';
-          const need = values.need || '';
-          const feeling = values.feeling || '';
-          const promise = values.promise || '';
-
-          const lines = [];
-          
-          // Opening
-          lines.push(`Loving Father,`);
-          
-          // Random praise element
-          lines.push(prayerTemplates.praise[Math.floor(Math.random() * prayerTemplates.praise.length)]);
-
-          // Main prayer content
-          if (who) {
-            lines.push(`We lift up ${who} to You today.`);
-          }
-
-          if (feeling) {
-            const emotionalResponse = getEmotionalResponse(feeling);
-            lines.push(`As they experience ${feeling}, we pray for ${emotionalResponse}.`);
-            lines.push(prayerTemplates.comfort[Math.floor(Math.random() * prayerTemplates.comfort.length)]);
-          }
-
-          if (need) {
-            lines.push(`We specifically ask for ${need}.`);
-            if (need.toLowerCase().includes('heal')) {
-              lines.push(prayerTemplates.healing[Math.floor(Math.random() * prayerTemplates.healing.length)]);
-            } else {
-              lines.push(prayerTemplates.guidance[Math.floor(Math.random() * prayerTemplates.guidance.length)]);
-            }
-          }
-
-          // Biblical promise or hope
-          if (promise) {
-            lines.push(`We stand on Your promise of ${promise}, knowing that You are faithful to fulfill Your word.`);
-          }
-
-          // Closing
-          lines.push(`Thank You for hearing our prayer and for Your constant love that surrounds ${who}.`);
-          lines.push('In Jesus\' name, amen.');
-
-          return lines.join('\n\n');
-        }
-
-        previewBtn.addEventListener('click', function(){
-          const data = new FormData(form);
-          const values = Object.fromEntries(data.entries());
-          const prayer = composePrayer(values).trim();
-          prayerTextEl.textContent = prayer;
-          previewWrap.classList.remove('d-none');
-          copyBtn.disabled = false;
-        });
-
-        copyBtn.addEventListener('click', function(){
-          const text = prayerTextEl.textContent;
-          if(!text) return;
-          navigator.clipboard && navigator.clipboard.writeText(text).then(function(){
-            copyBtn.textContent = 'Copied';
-            setTimeout(()=> copyBtn.textContent = 'Copy Prayer', 2000);
-          }, function(){
-            // fallback
-            const ta = document.createElement('textarea');
-            ta.value = text; document.body.appendChild(ta); ta.select();
-            try{ document.execCommand('copy'); copyBtn.textContent = 'Copied'; }catch(e){}
-            ta.remove();
-            setTimeout(()=> copyBtn.textContent = 'Copy Prayer', 2000);
-          });
-        });
-
-        // Secure prayer request and response management
-        const sendBtn = document.getElementById('send-btn');
         const shareCheckbox = document.getElementById('share-prayer');
-        const form = document.getElementById('prayer-form');
+        const emailInput = document.getElementById('email');
 
-        // Secure prayer request management system
+        function updateFormState() {
+          // Enable submit button only if checkbox is checked and email is provided
+          const emailValid = emailInput.value.trim() !== '' && emailInput.validity.valid;
+          const submitBtn = prayerForm.querySelector('button[type="submit"]');
+          submitBtn.disabled = !shareCheckbox.checked || !emailValid;
+          submitBtn.classList.toggle('opacity-50', submitBtn.disabled);
+        }
+
+        // Prayer request management system
         const PrayerManager = {
           storageKey: 'prayerRequests',
-          tokenKey: 'prayerTokens',
 
-          // Generate a secure token for communication
-          generateToken() {
-            return Array.from(crypto.getRandomValues(new Uint8Array(32)))
-              .map(b => b.toString(16).padStart(2, '0'))
-              .join('');
-          },
-
-          // Store token mapping
-          saveToken(requestId, token) {
-            const tokens = JSON.parse(localStorage.getItem(this.tokenKey) || '{}');
-            tokens[token] = requestId;
-            localStorage.setItem(this.tokenKey, JSON.stringify(tokens));
-          },
-
-          // Get request by token
-          getRequestByToken(token) {
-            const tokens = JSON.parse(localStorage.getItem(this.tokenKey) || '{}');
-            const requestId = tokens[token];
-            if (!requestId) return null;
-
-            const requests = this.getRequests();
-            return requests.find(r => r.id === requestId);
-          },
-          
-          // Initialize storage
           init() {
             if (!localStorage.getItem(this.storageKey)) {
               localStorage.setItem(this.storageKey, JSON.stringify([]));
             }
           },
 
-          // Save new prayer request
           saveRequest(request) {
             const requests = this.getRequests();
             request.id = Date.now().toString();
@@ -554,128 +415,57 @@
             return request.id;
           },
 
-          // Get all prayer requests
           getRequests() {
             return JSON.parse(localStorage.getItem(this.storageKey) || '[]');
           },
 
-          // Update prayer request status and response
-          updateRequest(id, updates) {
-            const requests = this.getRequests();
-            const index = requests.findIndex(r => r.id === id);
-            if (index !== -1) {
-              requests[index] = { ...requests[index], ...updates };
-              localStorage.setItem(this.storageKey, JSON.stringify(requests));
-            }
-          },
-
-          // Format prayer request for email
-          formatEmailBody(request, type = 'initial') {
-            if (type === 'initial') {
-              return encodeURIComponent(
-                `New Prayer Request:\n\n` +
-                `For: ${request.who}\n` +
-                `Need: ${request.need}\n` +
-                `Feeling: ${request.feeling}\n` +
-                (request.promise ? `Promise claimed: ${request.promise}\n\n` : '\n') +
-                `Generated Prayer:\n${request.prayer}\n\n` +
-                `Request ID: ${request.id}\n` +
-                `Reply to: ${request.email}`
-              );
-            } else { // follow-up
-              return encodeURIComponent(
-                `Prayer Follow-up:\n\n` +
-                `Dear friend,\n\n` +
-                `I wanted to let you know that I've been praying for your request:\n` +
-                `"${request.need}"\n\n` +
-                `Here's how I've been praying for you:\n` +
-                `${request.responseText || '[Add your personal prayer and thoughts here]'}\n\n` +
-                `Would you let me know how you're doing? I'm here to continue praying with you.\n\n` +
-                `With care,\n[Your name]`
-              );
-            }
+          formatEmailBody(request) {
+            return encodeURIComponent(
+              `Prayer Request\n\n` +
+              `From: ${request.who || 'Anonymous'}\n\n` +
+              `Request: ${request.need}\n\n` +
+              (request.promise ? `Scripture Reference: ${request.promise}\n\n` : '') +
+              `Request ID: ${request.id}\n` +
+              `Contact: ${request.email}`
+            );
           }
         };
 
         // Initialize prayer manager
         PrayerManager.init();
 
-        function updateSendButton() {
-          const canSend = shareCheckbox.checked && emailInput.value.includes('@');
-          sendBtn.disabled = !canSend;
-          sendBtn.classList.toggle('opacity-50', !canSend);
-        }
+        // Update form state when email or checkbox changes
+        emailInput.addEventListener('input', updateFormState);
+        shareCheckbox.addEventListener('change', updateFormState);
 
-        emailInput.addEventListener('input', updateSendButton);
-        shareCheckbox.addEventListener('change', updateSendButton);
+        // Form submission handler
+        prayerForm.addEventListener('submit', function(event) {
+          event.preventDefault();
 
-        // Enhanced send functionality with prayer tracking
-        sendBtn.addEventListener('click', async function() {
-          if (!shareCheckbox.checked || !emailInput.value) return;
+          if (!shareCheckbox.checked || !emailInput.validity.valid) return;
 
-          const formData = new FormData(form);
-          const prayer = prayerTextEl.textContent;
+          const formData = new FormData(this);
           
           // Save prayer request
           const requestData = {
             who: formData.get('who'),
             need: formData.get('need'),
-            feeling: formData.get('feeling'),
             promise: formData.get('promise'),
-            email: formData.get('email'),
-            prayer: prayer
+            email: formData.get('_replyto')
           };
 
           const requestId = PrayerManager.saveRequest(requestData);
           
-          // Create email with tracking ID
-          const subject = encodeURIComponent('Prayer Request from Creative Calling');
+          // Create email 
+          const subject = encodeURIComponent('Prayer Request - Creative Calling');
           const body = PrayerManager.formatEmailBody(requestData);
 
-          // Open email client
-          window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
-
-          // Show confirmation
-          const originalText = sendBtn.textContent;
-          sendBtn.textContent = 'Request Sent!';
-          sendBtn.disabled = true;
-
-          // Add response button after sending
-          const responseBtn = document.createElement('button');
-          responseBtn.className = 'btn-outline';
-          responseBtn.textContent = 'Send Follow-up';
-          responseBtn.onclick = () => {
-            const responseSubject = encodeURIComponent(`Prayer Follow-up - ${requestData.who}`);
-            const responseBody = PrayerManager.formatEmailBody(requestData, 'follow-up');
-            window.location.href = `mailto:${requestData.email}?subject=${responseSubject}&body=${responseBody}`;
-            
-            // Update request status
-            PrayerManager.updateRequest(requestId, {
-              status: 'followed-up',
-              lastFollowUp: new Date().toISOString()
-            });
-          };
-
-          // Add response button to form
-          setTimeout(() => {
-            sendBtn.parentNode.insertBefore(responseBtn, sendBtn.nextSibling);
-            sendBtn.textContent = originalText;
-            sendBtn.disabled = false;
-          }, 3000);
+          // Submit the form
+          this.submit();
         });
 
-        form.addEventListener('reset', function(){
-          prayerTextEl.textContent = '';
-          previewWrap.classList.add('d-none');
-          copyBtn.disabled = true;
-          sendBtn.disabled = true;
-          sendBtn.classList.add('opacity-50');
-        });
-
-        // Prayer Management Interface
-        const managementSection = document.getElementById('prayer-management');
-        const prayerList = document.getElementById('prayer-list');
-        const template = document.getElementById('prayer-card-template');
+        // Initial form state
+        updateFormState();
 
         // Show management section with special key combination (Ctrl+Shift+P)
         document.addEventListener('keydown', function(e) {
