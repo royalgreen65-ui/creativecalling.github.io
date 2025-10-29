@@ -99,6 +99,11 @@
     #just-for-fun iframe {
       border: none;
     }
+    
+    .iframe-custom-height {
+      height: calc(80vh - 10px) !important;
+      min-height: 600px;
+    }
   </style>
 </head>
 <body>
@@ -649,11 +654,11 @@
     
     <div class="card border-custom">
       <div class="card-body p-0">
-        <div class="ratio ratio-16x9">
+        <div class="iframe-custom-height">
           <iframe 
             src="https://royalgreen65-ui.github.io/conversations-with-the-divine/" 
             title="Conversations with the Divine"
-            class="w-100">
+            class="w-100 h-100"
           </iframe>
         </div>
       </div>
