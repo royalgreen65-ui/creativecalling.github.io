@@ -147,6 +147,16 @@ a:hover {
   border: none;
 }
 
+.iframe-container-50vh {
+  height: 50vh;
+  position: relative;
+}
+
+.iframe-container-50vh iframe {
+  height: 100%;
+  border: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 700px) {
   h1 {
