@@ -36,3 +36,12 @@ The site uses Bootstrap for styling and includes custom CSS in `assets/css/site.
 - `assets/css/site.css` - Custom component styles
 - `assets/stories.json` - User story data
 - `thank-you.html` - Confirmation page for form submissions
+
+## Contributing
+
+New to Git or GitHub? Check out our guides:
+
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Complete guide to working with this repository, including push/pull workflows, troubleshooting, and best practices
+- **[GIT-QUICK-REFERENCE.md](GIT-QUICK-REFERENCE.md)** - Quick reference for common Git commands
+
+For issues or questions, please [open an issue](https://github.com/royalgreen65-ui/creativecalling.github.io/issues).
