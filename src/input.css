@@ -1,19 +1,4 @@
-/* stylelint-disable at-rule-no-unknown */
-
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-@layer base {
-  body {
-    @apply font-serif bg-bg text-text leading-relaxed;
-  }
-  h2 {
-    @apply font-heading text-text text-2xl mb-2;
-  }
-}
-/* water.css-friendly replacements
-    Note: remove the Tailwind @import/@apply lines from this file when switching to water.css. */
+/* water.css-friendly replacements */
 
 :root{
   --accent: #0ea5e9;   /* cyan-500 */
@@ -76,12 +61,4 @@ h2 {
   background: rgba(37, 99, 235, 0.9); /* slightly darker on hover */
   color: #fff;
   outline: none;
-}
-@layer components {
-  .button {
-    @apply bg-transparent border border-accent text-accent px-[18px] py-[10px] rounded-md no-underline font-semibold hover:bg-accent hover:text-white transition-colors;
-  }
-  .button-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
-  }
 }
