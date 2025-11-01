@@ -1,17 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
 
+/* Default to dark theme */
 :root {
   --background: #363636;
   --border: #404040;
   --text-main: #e6e6e6;
   --text-muted: #b0b0b0;
-  --accent: #8aa7a1;
+  --accent: #5f938a;
+  --body-bg: #2f2f2f;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --border: #dee2e6;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --body-bg: #f8f9fa;
 }
 
 body {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  background-color: #2f2f2f;
+  background-color: var(--body-bg);
   color: var(--text-main);
+}
+
+.hero-header {
+  position: relative;
+  /* You'll need to add an image at this path */
+  background-image: url('../images/landing-background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+  border-radius: 0.5rem;
+  color: white;
+  z-index: 1;
+}
+
+.hero-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.subtle-background {
+  /* A subtle, cross-hatch pattern */
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.03) 75%, rgba(0,0,0,0.03)), linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.03) 75%, rgba(0,0,0,0.03));
+  background-size: 20px 20px;
 }
 
 .btn-custom {
@@ -28,6 +66,11 @@ body {
   background-color: #7a9791;
   color: white !important;
   transform: translateY(-2px);
+}
+
+.btn-xl {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
 }
 
 .btn-outline-custom {
@@ -106,4 +149,88 @@ body {
   height: calc(70vh) !important;
   min-height: 400px;
   max-height: 600px;
+}
+
+.external-link-icon {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.4rem;
+}
+
+.scripture-block {
+  position: relative;
+}
+.copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.story-card .scripture-block .copy-btn {
+  position: absolute;
+}
+
+.prayer-request-block .copy-btn {
+  position: static; /* Override absolute positioning for this specific case */
+}
+
+/* Fade-in animation for cards */
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  width: 48px;
+  height: 48px;
+}
+
+.theme-toggle-btn .bi-sun-fill,
+.theme-toggle-btn .bi-moon-fill {
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-btn .bi-sun-fill {
+  transform: scale(0);
+}
+
+[data-theme="light"] .theme-toggle-btn .bi-moon-fill {
+  transform: scale(0);
+}
+
+/* Navbar text color */
+.navbar .navbar-brand {
+  color: var(--text-main);
+}
+.navbar .navbar-brand:hover {
+  color: var(--accent);
+}
+.navbar .nav-link {
+  color: var(--text-muted);
+}
+.navbar .nav-link:hover {
+  color: var(--text-main);
+}
+.navbar .nav-link.active {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* Make navbar toggler icon visible in dark mode */
+[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(230, 230, 230, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+[data-theme="light"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33, 37, 41, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-brand .logo-svg {
+  width: 28px;
+  height: 28px;
 }

@@ -3,335 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A quiet space for spiritual reflection. Explore biblical stories, share testimonies, and find resources to help you rediscover a gentle path back to God." />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Creative Calling — A Quiet Path Home" />
+  <meta property="og:description" content="A quiet space for spiritual reflection. Explore biblical stories, share testimonies, and find resources to help you rediscover a gentle path back to God." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://royalgreen65-ui.github.io/creativecalling.github.io/index.html" />
+  <meta property="og:image" content="https://royalgreen65-ui.github.io/creativecalling.github.io/assets/images/creative-calling-og-image.png" />
+  <meta property="og:site_name" content="Creative Calling" />
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Creative Calling — A Quiet Path Home">
+  <meta name="twitter:description" content="A quiet space for spiritual reflection. Explore biblical stories, share testimonies, and find resources to help you rediscover a gentle path back to God.">
+  <meta name="twitter:image" content="https://royalgreen65-ui.github.io/creativecalling.github.io/assets/images/creative-calling-og-image.png">
+  
   <title>Creative Calling — A Quiet Path Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .back-to-top-btn {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .back-to-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
 </head>
 <body>
-  <header class="text-center py-5 container" role="banner">
+  <nav class="navbar navbar-expand-lg sticky-top bg-custom border-bottom border-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-inline-block align-text-top me-2 logo-svg"><path d="M15.5 5.5C15.5 10.4706 11.4706 14.5 6.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M17.5 9.5C17.5 13.366 14.366 16.5 10.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        Creative Calling
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="wandering.html">Wandering</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="prayer.html">Prayer</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="text-center py-5 container hero-header" role="banner">
     <h1 class="display-4 mb-4">Come home. Be still. Listen.</h1>
     <p class="text-muted-custom lead mb-4">A gentle invitation to rediscover the One who quietly holds you.</p>
     <p class="fst-italic mb-4">"Be still, and know that I am God." — Psalm 46:10</p>
-    <p><a href="https://royalgreen65-ui.github.io/creativecalling.github.io/about.html" class="btn btn-custom">About</a></p>
+    <p><a href="about.html" class="btn btn-custom btn-lg btn-xl">About</a></p>
   </header>
 
-  <section id="videos" class="py-5 container">
-    <h2 class="display-5 mb-4">Biblical Stories in Video</h2>
-    <p class="lead mb-4">Experience God's timeless stories brought to life through thoughtfully curated videos.</p>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title mb-3">Jesus Walks On Water</h5>
-            <div class="ratio ratio-1x1 mb-3">
-              <iframe src="https://www.youtube.com/embed/O7WWi65gb14" title="Jesus Walks On Water and Saves Peter (Matthew 14)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <main>
+    <section id="videos" class="py-5 container fade-in-card">
+      <h2 class="display-5 mb-4">Biblical Stories in Video</h2>
+      <p class="lead mb-4">Experience God's timeless stories brought to life through thoughtfully curated videos.</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Jesus Walks On Water</h5>
+              <div class="ratio ratio-1x1 mb-3">
+                <iframe src="https://www.youtube.com/embed/O7WWi65gb14" title="Jesus Walks On Water and Saves Peter (Matthew 14)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <p class="card-text text-muted-custom small">Jesus demonstrates His divine power and compassion by walking on water and saving Peter. (Matthew 14)</p>
             </div>
-            <p class="card-text text-muted-custom small">Jesus demonstrates His divine power and compassion by walking on water and saving Peter. (Matthew 14)</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">The Healing of the Leper</h5>
+              <div class="ratio ratio-1x1 mb-3">
+                <iframe src="https://www.youtube.com/embed/VL8DThllZAY" title="The Parable of the Prodigal Son (The Chosen)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <p class="card-text text-muted-custom small">Jesus heals a leper, demonstrating His authority and compassion, and instructs him to follow the law of Moses. (Mark 1:40-45)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">The Woman at the Well</h5>
+              <div class="ratio ratio-1x1 mb-3">
+                <iframe src="https://www.youtube.com/embed/e-OXgunuz_4?si=tOVBK5VTJ5Qa1IOL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <p class="card-text text-muted-custom small">Jesus meets a Samaritan woman at a well and offers her "living water," revealing His identity as the Messiah and breaking down social and religious barriers. (John 4)</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="mysticism" class="py-5 container">
-    <h2 class="display-5 mb-4">A Word on Wandering</h2>
-    <div class="card mb-4 border-custom wandering-card">
-      <div class="card-body">
-        <div class="mb-5 scripture-section">
-          <p class="h5 mb-3 scripture-heading">Scripture Speaks</p>
-          <div class="mb-4">
-            <p class="fw-bold mb-2 text-muted-custom">Proverbs 3:5–6</p>
-            <p class="fst-italic mb-4 lead">"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight."</p>
-          </div>
-          <div>
-            <p class="fw-bold mb-2 text-muted-custom">Isaiah 30:15</p>
-            <p class="fst-italic lead">"In repentance and rest is your salvation, in quietness and trust is your strength, but you would have none of it."</p>
-          </div>
+    <section id="mysticism" class="py-5 container fade-in-card">
+      <div class="card text-center">
+        <div class="card-body py-5">
+          <h2 class="display-5 mb-4">A Word on Wandering</h2>
+          <p class="lead mb-4">A reflection on the spiritual dangers of self-reliance and the importance of returning to a posture of rest and trust in God.</p>
+          <a href="wandering.html" class="btn btn-custom">Read More</a>
         </div>
+      </div>
+    </section>
 
-        <h3 class="h3 mb-4 accent-heading">The Power Trap: When the Church Trusts Itself More Than God</h3>
-        <p class="lead mb-4">In today's modern church, we often see a shift from dependence on God to dependence on charisma, strategy, and self-made power. Worship becomes performance. Leadership becomes branding. Ministry becomes marketing. But Scripture warns us: self-reliance leads to spiritual ruin.</p>
-
-        <div class="card bg-custom border-custom mb-4">
-          <div class="card-body">
-            <h4 class="h5 mb-3 accent-heading">Example: King Uzziah</h4>
-            <p class="mb-0">2 Chronicles 26 tells the story of King Uzziah, who was blessed by God and became powerful. But when he grew strong, his pride led him to enter the temple unlawfully, and God struck him with leprosy. His downfall came not from weakness—but from strength without submission.</p>
+    <section id="testimonies" class="py-5 container fade-in-card">
+      <h2 class="display-5 mb-4">Real Stories</h2>
+      <p class="lead mb-4">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
+      <div id="stories-container" class="row g-4">
+        <!-- Stories will be loaded here -->
+      </div>
+      <div class="text-center mt-4">
+        <button id="load-more-btn" class="btn btn-outline-custom d-none">Load More Stories</button>
+      </div>
+      <div id="story-form" class="mt-5">
+        <h3 class="h4 mb-4">Share Your Story</h3>
+        <form id="share-story-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Story Submission">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://royalgreen65-ui.github.io/creativecalling.github.io/thank-you.html">
+          
+          <div class="mb-3">
+            <label for="story-author" class="form-label">Your Name (optional)</label>
+            <input type="text" class="form-control bg-custom border-custom" id="story-author" name="author" placeholder="Anonymous">
           </div>
-        </div>
-
-        <div class="mb-5">
-          <h4 class="h4 mb-4 accent-heading">Reflection</h4>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card h-100 bg-custom border-custom reflection-card">
-                <div class="card-body">
-                  <h5 class="card-title text-center mb-3">Leaders</h5>
-                  <p class="card-text text-center mb-0">Are we building platforms or altars?</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100 bg-custom border-custom reflection-card">
-                <div class="card-body">
-                  <h5 class="card-title text-center mb-3">Worship Teams</h5>
-                  <p class="card-text text-center mb-0">Are we performing or ministering?</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100 bg-custom border-custom reflection-card">
-                <div class="card-body">
-                  <h5 class="card-title text-center mb-3">Congregations</h5>
-                  <p class="card-text text-center mb-0">Are we consuming or communing?</p>
-                </div>
-              </div>
-            </div>
+          
+          <div class="mb-3">
+            <label for="story-title" class="form-label fw-semibold">Story Title</label>
+            <input type="text" class="form-control bg-custom border-custom" id="story-title" name="title" required>
           </div>
-        </div>
+          
+          <div class="mb-3">
+            <label for="story-body" class="form-label fw-semibold">Your Story</label>
+            <textarea class="form-control bg-custom border-custom" id="story-body" name="body" rows="6" required 
+                      placeholder="Share how God's grace has touched your life..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-custom">Share Story</button>
+        </form>
+      </div>
+    </section>
 
-        <p class="lead text-center mb-4">Let us return to the posture of repentance and rest. Let us trade self-exaltation for God-dependence.</p>
-
-        <div class="text-center closing-prayer">
-          <p class="fst-italic text-muted-custom mb-0">
-            "Lord, forgive us for trusting in our own strength. Teach us to rest in You, to lead with humility, and to serve with surrendered hearts. May Your power be made perfect in our weakness."
+    <section id="just-for-fun" class="py-5 container fade-in-card">
+      <h2 class="display-5 mb-4">Just For Fun</h2>
+      <p class="lead mb-4">A playful way to explore divine conversations.</p>
+      
+      <div class="card border-custom text-center">
+        <div class="card-body py-5">
+          <h5 class="card-title mb-3">Conversations with the Divine</h5>
+          <p class="card-text text-muted-custom mb-4">
+            An interactive experience that reminds us that even in our most human moments, 
+            divine grace meets us where we are.
+          </p>
+          <a href="https://royalgreen65-ui.github.io/conversations-with-the-divine-/" 
+             target="_blank" 
+             rel="noopener"
+             class="btn btn-custom btn-lg d-inline-flex align-items-center">
+            Start a Divine Conversation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right external-link-icon" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+              <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+            </svg>
+          </a>
+          <p class="small text-muted-custom mt-3">
+            Opens in a new window for the best experience
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="testimonies" class="py-5 container">
-    <h2 class="display-5 mb-4">Real Stories</h2>
-    <p class="lead mb-4">Accounts of redemption and the quiet work of grace in ordinary lives.</p>
-    <div id="stories-container" class="row g-4">
-      <!-- Stories will be loaded here -->
-    </div>
-    <div id="story-form" class="mt-5">
-      <h3 class="h4 mb-4">Share Your Story</h3>
-      <form id="share-story-form" action="https://formsubmit.co/your@email.com" method="POST">
-        <input type="hidden" name="_subject" value="New Story Submission">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you">
-        
-        <div class="mb-3">
-          <label for="story-author" class="form-label">Your Name (optional)</label>
-          <input type="text" class="form-control bg-custom border-custom" id="story-author" name="author" placeholder="Anonymous">
-        </div>
-        
-        <div class="mb-3">
-          <label for="story-title" class="form-label fw-semibold">Story Title</label>
-          <input type="text" class="form-control bg-custom border-custom" id="story-title" name="title" required>
-        </div>
-        
-        <div class="mb-3">
-          <label for="story-body" class="form-label fw-semibold">Your Story</label>
-          <textarea class="form-control bg-custom border-custom" id="story-body" name="body" rows="6" required 
-                    placeholder="Share how God's grace has touched your life..."></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-custom">Share Story</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="resources" class="py-5 container">
-    <h2 class="display-5 mb-4">Resources</h2>
-    <ul class="list-unstyled">
-      <li class="mb-4">
-        <a href="https://www.mardel.com/bibletranslationguide" 
-           target="_blank" 
-           rel="noopener"
-           class="text-decoration-none fw-bold fs-5">Bible Translation Guide</a>
-        <p class="text-muted-custom mt-2">Start here! A helpful guide explaining different Bible translations, their reading levels, and translation philosophies to help you choose the right Bible for your needs.</p>
-      </li>
-      <li class="mb-4">
-        <a href="https://www.youversion.com/the-bible-app/" 
-           target="_blank" 
-           rel="noopener"
-           class="text-decoration-none fw-bold fs-5">YouVersion Bible App</a>
-        <p class="text-muted-custom mt-2">Free Bible app with multiple translations, reading plans, and daily devotionals. Available on all devices.</p>
-      </li>
-      <li class="mb-4">
-        <a href="https://www.blueletterbible.org/" 
-           target="_blank" 
-           rel="noopener"
-           class="text-decoration-none fw-bold fs-5">Blue Letter Bible</a>
-        <p class="text-muted-custom mt-2">In-depth study tool with Greek/Hebrew lexicon, commentaries, and cross-references. Great for word studies.</p>
-      </li>
-      <li class="mb-4">
-        <a href="https://www.logos.com/" 
-           target="_blank" 
-           rel="noopener"
-           class="text-decoration-none fw-bold fs-5">Logos Bible Software</a>
-        <p class="text-muted-custom mt-2">Professional Bible study software with extensive library options, original language tools, and academic resources.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="prayer" class="py-5 container">
-    <h2 class="display-5 mb-4">Share Your Prayer Request</h2>
-    <p class="lead mb-4">Accounts of God's faithfulness begin with prayer. Share your heart with us.</p>
-    
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Recently Answered Prayers</h5>
-            <h6 class="card-subtitle mb-3 text-muted-custom">Anonymous • Matthew 7:7</h6>
-            <p class="card-text mb-4">
-              "Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you."
-              Join our community of prayer warriors as we lift each other up in faith and love.
-            </p>
-            <p class="small text-muted-custom">
-              Your privacy is important to us. All prayer requests are held in strict confidence.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <form id="prayer-form" action="https://formsubmit.co/royal.green65@gmail.com" method="POST">
-              <!-- FormSubmit configuration -->
-              <input type="hidden" name="_subject" value="Prayer Request">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://creativecalling.github.io/thank-you.html">
-              <input type="text" name="_honey" class="honeypot" aria-hidden="true" tabindex="-1">
-              <input type="hidden" name="_captcha" value="true">
-
-              <div class="mb-4">
-                <label for="who" class="form-label h6">Your Name (Optional)</label>
-                <input id="who" name="who" type="text"
-                       class="form-control bg-custom border-custom" 
-                       placeholder="Share your name or remain anonymous"
-                       aria-label="Your name" />
+    <section id="account" class="py-5 container fade-in-card">
+      <h2 class="display-5 mb-4">Join the Community</h2>
+      <p class="lead mb-4">Create an account to save your prayers, share testimonies, and connect with others.</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="account-area">
+            <!-- This area will be replaced by user info on login -->
+            <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="account-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-panel" type="button" role="tab" aria-controls="login-panel" aria-selected="true">Login</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-panel" type="button" role="tab" aria-controls="register-panel" aria-selected="false">Register</button>
+                  </li>
+                </ul>
               </div>
-
-              <div class="mb-4">
-                <label for="need" class="form-label h6">Your Prayer Request</label>
-                <textarea id="need" name="need" required rows="4"
-                         class="form-control bg-custom border-custom" 
-                         placeholder="Share your heart. What would you like us to pray for?"
-                         aria-label="Your prayer request"></textarea>
-              </div>
-
-              <div class="mb-4">
-                <label for="promise" class="form-label h6">Scripture That Brings You Hope (Optional)</label>
-                <input id="promise" name="promise" type="text" 
-                       class="form-control bg-custom border-custom" 
-                       placeholder="Any Bible verse you're holding onto"
-                       aria-label="Scripture reference" />
-              </div>
-
-              <div class="mb-4">
-                <label for="email" class="form-label h6">Email for Follow-up</label>
-                <input id="email" name="_replyto" type="email" required
-                       class="form-control bg-custom border-custom" 
-                       placeholder="We'll send you prayer updates and encouragement"
-                       aria-label="Your email address" />
-                <div class="text-muted-custom small mt-2">
-                  Your email is protected and only used for prayer correspondence
+              <div class="card-body">
+                <div class="tab-content" id="account-tabs-content">
+                  <!-- Login Form -->
+                  <div class="tab-pane fade show active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+                    <form id="login-form">
+                      <div id="login-alert" class="alert d-none" role="alert"></div>
+                      <div class="mb-3">
+                        <label for="login-email" class="form-label">Email</label>
+                        <input type="email" class="form-control bg-custom border-custom" id="login-email" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-custom border-custom" id="login-password" required>
+                      </div>
+                      <button type="submit" class="btn btn-custom">Login</button>
+                    </form>
+                  </div>
+                  <!-- Registration Form -->
+                  <div class="tab-pane fade" id="register-panel" role="tabpanel" aria-labelledby="register-tab">
+                    <form id="register-form">
+                      <div id="register-alert" class="alert d-none" role="alert"></div>
+                      <div class="mb-3">
+                        <label for="register-username" class="form-label">Username</label>
+                        <input type="text" class="form-control bg-custom border-custom" id="register-username" required minlength="3">
+                      </div>
+                      <div class="mb-3">
+                        <label for="register-email" class="form-label">Email</label>
+                        <input type="email" class="form-control bg-custom border-custom" id="register-email" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="register-password" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-custom border-custom" id="register-password" required minlength="6">
+                      </div>
+                      <button type="submit" class="btn btn-custom">Create Account</button>
+                    </form>
+                  </div>
                 </div>
-              </div>
-
-              <div class="form-check mb-4">
-                <input type="checkbox" id="share-prayer" name="request_followup" 
-                       class="form-check-input" required>
-                <label for="share-prayer" class="form-check-label small">
-                  Yes, please pray for me and send encouraging follow-ups
-                </label>
-              </div>
-
-              <button type="submit" class="btn btn-custom w-100">
-                Share Prayer Request
-              </button>
-            </form>
-
-    <div id="prayer-preview" class="card mt-4 d-none" aria-live="polite">
-      <div class="card-body">
-        <h3 class="card-title h4">Your Prayer</h3>
-        <blockquote id="prayer-text" class="blockquote lead fst-italic"></blockquote>
-      </div>
-    </div>
-
-    <!-- Prayer Management Section (only visible to you) -->
-    <div id="prayer-management" class="mt-5 border-top border-custom pt-4 d-none">
-      <h3 class="display-6 mb-4">Prayer Management</h3>
-      <div class="row g-4" id="prayer-list"></div>
-
-      <template id="prayer-card-template">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <div>
-                  <h4 class="card-title h5"></h4>
-                  <p class="text-muted-custom small date"></p>
-                </div>
-                <span class="status-badge badge rounded-pill"></span>
-              </div>
-              <div class="mb-3">
-                <p class="need mb-2"></p>
-                <p class="text-muted-custom feeling mb-2"></p>
-                <p class="promise fst-italic"></p>
-              </div>
-              <div class="response-area d-none mb-3">
-                <label class="form-label fw-semibold text-muted-custom mb-2">Your Response:</label>
-                <textarea class="response-text form-control bg-custom border-custom" 
-                          rows="4" placeholder="Write your prayer and thoughts here..."></textarea>
-              </div>
-              <div class="d-flex gap-2 flex-wrap">
-                <button class="btn btn-outline-custom respond-btn">Respond</button>
-                <button class="btn btn-outline-custom follow-up-btn">Send Follow-up</button>
-                <button class="btn btn-outline-custom mark-completed-btn">Mark Complete</button>
               </div>
             </div>
           </div>
+
+          <!-- Logged-in user view (hidden by default) -->
+          <div id="user-view" class="card d-none">
+              <div class="card-body text-center">
+                  <h4 id="welcome-message" class="card-title"></h4>
+                  <p class="text-muted-custom">You are now logged in. Welcome back!</p>
+                  <button id="logout-btn" class="btn btn-outline-custom">Logout</button>
+              </div>
+          </div>
+
         </div>
-      </template>
-    </div>
-
-  </section>
-
-  <section id="just-for-fun" class="py-5 container">
-    <h2 class="display-5 mb-4">Just For Fun</h2>
-    <p class="lead mb-4">A playful way to explore divine conversations.</p>
-    
-    <div class="card border-custom text-center">
-      <div class="card-body py-5">
-        <h5 class="card-title mb-3">Conversations with the Divine</h5>
-        <p class="card-text text-muted-custom mb-4">
-          An interactive experience that reminds us that even in our most human moments, 
-          divine grace meets us where we are.
-        </p>
-        <a href="https://royalgreen65-ui.github.io/conversations-with-the-divine-/" 
-           target="_blank" 
-           rel="noopener"
-           class="btn btn-custom btn-lg">
-          Start a Divine Conversation
-        </a>
-        <p class="small text-muted-custom mt-3">
-          Opens in a new window for the best experience
-        </p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="resources" class="py-5 container fade-in-card">
+       <div class="card text-center">
+        <div class="card-body py-5">
+          <h2 class="display-5 mb-4">Resources</h2>
+          <p class="lead mb-4">A curated list of Bible study tools, apps, and resources to help you deepen your understanding of Scripture.</p>
+          <a href="resources.html" class="btn btn-custom">Explore Resources</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="prayer" class="py-5 container fade-in-card">
+      <h2 class="display-5 mb-4">Share Your Prayer Request</h2>
+      <p class="lead mb-4">Accounts of God's faithfulness begin with prayer. Share your heart with us.</p>
+      <div class="text-center">
+        <a href="prayer.html" class="btn btn-custom btn-lg">Submit a Prayer Request</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="container py-5">
     <div class="text-center">
       <p class="small mb-3">© 2025 Creative Calling — A quiet path home</p>
-      <p class="text-muted-custom small mb-3">Made with 💝 using VS Code and GitHub Copilot</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://royalgreen65-ui.github.io/creativecalling.github.io/about.html" class="text-decoration-none small">About</a>
-        <a href="https://royalgreen65-ui.github.io/creativecalling.github.io/#videos" class="text-decoration-none small">Videos</a>
-        <a href="https://royalgreen65-ui.github.io/creativecalling.github.io/#mysticism" class="text-decoration-none small">Wandering</a>
-        <a href="https://royalgreen65-ui.github.io/creativecalling.github.io/#testimonies" class="text-decoration-none small">Testimonies</a>
-        <a href="https://royalgreen65-ui.github.io/creativecalling.github.io/#resources" class="text-decoration-none small">Resources</a>
+      <p class="small text-muted-custom mb-3">Last Updated: October 29, 2025</p>
+      <p class="text-muted-custom small mb-3">Made with 💝 using VS Code and Gemini Code Assist</p>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a href="about.html" class="text-decoration-none small">About</a>
+        <a href="#videos" class="text-decoration-none small">Videos</a>
+        <a href="wandering.html" class="text-decoration-none small">Wandering</a>
+        <a href="#testimonies" class="text-decoration-none small">Testimonies</a>
+        <a href="#just-for-fun" class="text-decoration-none small">Just For Fun</a>
+        <a href="#account" class="text-decoration-none small">Account</a>
+        <a href="resources.html" class="text-decoration-none small">Resources</a>
+        <a href="prayer.html" class="text-decoration-none small">Prayer</a>
       </div>
     </div>
   </footer>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="btn btn-custom position-fixed bottom-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center shadow theme-toggle-btn" aria-label="Toggle theme">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill position-absolute" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill position-absolute" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    </svg>
+  </button>
 
   <!-- Back to top button -->
   <button 
@@ -341,7 +307,299 @@
     ↑
   </button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const storiesContainer = document.getElementById('stories-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        let allStories = [];
+        let storiesDisplayed = 0;
+        const storiesPerPage = 2;
+
+        // Fade-in animation for cards
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        function observeNewCards() {
+            const newCards = document.querySelectorAll('.fade-in-card:not(.is-visible), .story-card:not(.is-visible)');
+            newCards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        async function fetchStories() {
+            console.log('Fetching stories...');
+            try {
+                const response = await fetch('assets/stories.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const stories = await response.json();
+                console.log('Stories fetched:', stories);
+                allStories = stories.filter(story => story.status === 'approved')
+                                       .sort((a, b) => new Date(b.dateApproved || b.dateSubmitted) - new Date(a.dateApproved || a.dateSubmitted));
+                console.log('Approved stories:', allStories);
+                displayStories();
+            } catch (error) {
+                console.error("Could not fetch stories:", error);
+                if(storiesContainer) {
+                    storiesContainer.innerHTML = '<p class="text-muted-custom">Could not load stories at this time.</p>';
+                }
+            }
+        }
+
+        function displayStories() {
+            if(!storiesContainer) {
+                console.log('Stories container not found.');
+                return;
+            }
+            console.log('Displaying stories...');
+
+            const storiesToDisplay = allStories.slice(storiesDisplayed, storiesDisplayed + storiesPerPage);
+            console.log('Stories to display:', storiesToDisplay);
+            
+            storiesToDisplay.forEach(story => {
+                const storyDate = new Date(story.dateApproved || story.dateSubmitted).toLocaleDateString();
+                const scriptureHTML = story.scripture ? `
+                    <div class="mt-3 pt-3 border-top border-custom scripture-block">
+                        <p class="small text-muted-custom mb-1">Scripture Reference</p>
+                        <p class="fst-italic scripture-text">"${story.scripture}"</p>
+                    </div>` : '';
+                const tagsHTML = story.tags && story.tags.length > 0 ? `
+                    <div class="mt-3 pt-3 border-top border-custom tags-block">
+                        <p class="small text-muted-custom mb-1">Tags</p>
+                        <div class="d-flex flex-wrap gap-1">
+                            ${story.tags.map(tag => `<span class="badge bg-custom border-custom">${tag}</span>`).join('')}
+                        </div>
+                    </div>` : '';
+
+                const storyHTML = `
+                    <div class="col-md-6 mb-4 story-card">
+                        <div class="card h-100 story-card">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">${story.title}</h5>
+                                <h6 class="card-subtitle mb-3 text-muted-custom">${story.author} • ${storyDate}</h6>
+                                <p class="card-text flex-grow-1">${story.body}</p>
+                                ${scriptureHTML}
+                                ${tagsHTML}
+                            </div>
+                        </div>
+                    </div>`;
+                storiesContainer.insertAdjacentHTML('beforeend', storyHTML);
+            });
+
+            storiesDisplayed += storiesToDisplay.length;
+
+            if (loadMoreBtn) {
+                if (storiesDisplayed >= allStories.length) {
+                    loadMoreBtn.classList.add('d-none');
+                } else {
+                    loadMoreBtn.classList.remove('d-none');
+                }
+            }
+            
+            observeNewCards();
+        }
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', displayStories);
+        }
+
+        fetchStories();
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top-btn');
+        if(backToTopButton) {
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 200) {
+                backToTopButton.classList.add('show');
+              } else {
+                backToTopButton.classList.remove('show');
+              }
+            });
+        }
+
+        // Copy to clipboard for scripture
+        document.body.addEventListener('click', function(event) {
+          if (event.target.classList.contains('copy-btn')) {
+            const button = event.target;
+            const scriptureBlock = button.closest('.scripture-block');
+            let textToCopy = '';
+
+            if (scriptureBlock) {
+              textToCopy = scriptureBlock.querySelector('.scripture-text').innerText;
+            }
+            
+            if (!textToCopy) return;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+              const originalText = button.textContent;
+              button.textContent = 'Copied!';
+              button.disabled = true;
+              setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+              }, 2000);
+            }).catch(err => {
+              console.error('Failed to copy text: ', err);
+              alert('Failed to copy text.');
+            });
+          }
+        });
+
+        // Initial observation for fade-in cards
+        observeNewCards();
+
+        // Theme toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        function setTheme(theme) {
+          htmlEl.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+        }
+
+        if(themeToggle) {
+            themeToggle.addEventListener('click', () => {
+              const currentTheme = htmlEl.getAttribute('data-theme') || 'dark';
+              const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+              setTheme(newTheme);
+            });
+        }
+
+        // Apply saved theme on load
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        setTheme(savedTheme);
+
+        // --- Account Management ---
+        const API_URL = 'http://localhost:5000/api/users';
+        const accountArea = document.getElementById('account-area');
+        const userView = document.getElementById('user-view');
+        const welcomeMessage = document.getElementById('welcome-message');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        function showAlert(formType, message, isSuccess) {
+            const alertEl = document.getElementById(`${formType}-alert`);
+            alertEl.textContent = message;
+            alertEl.className = `alert ${isSuccess ? 'alert-success' : 'alert-danger'}`;
+            alertEl.classList.remove('d-none');
+        }
+
+        function handleAuthSuccess(token) {
+            localStorage.setItem('token', token);
+            // Decode token to get user info (simple decode, no verification needed here)
+            try {
+                const payload = JSON.parse(atob(token.split('.')[1]));
+                const { id, username } = payload.user;
+                localStorage.setItem('userId', id);
+                localStorage.setItem('username', username);
+                updateUIForLoggedInUser(`Welcome, ${username}!`);
+            } catch (e) {
+                console.error("Error decoding token:", e);
+                // If token is malformed, log out
+                logout();
+            }
+        }
+
+        function updateUIForLoggedInUser(message) {
+            if (accountArea && userView && welcomeMessage) {
+                accountArea.classList.add('d-none');
+                userView.classList.remove('d-none');
+                welcomeMessage.textContent = message;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('userId');
+            localStorage.removeItem('username');
+            if (accountArea && userView) {
+                accountArea.classList.remove('d-none');
+                userView.classList.add('d-none');
+            }
+        }
+
+        // Check for existing token and username on page load
+        const token = localStorage.getItem('token');
+        const username = localStorage.getItem('username');
+        if (token && username) {
+            updateUIForLoggedInUser(`Welcome back, ${username}!`);
+        }
+
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', logout);
+        }
+
+        if (registerForm) {
+            registerForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const username = document.getElementById('register-username').value;
+                const email = document.getElementById('register-email').value;
+                const password = document.getElementById('register-password').value;
+
+                try {
+                    const res = await fetch(`${API_URL}/register`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ username, email, password })
+                    });
+                    const data = await res.json();
+                    if (!res.ok) {
+                        throw new Error(data.msg || 'Registration failed');
+                    }
+                    showAlert('register', 'Registration successful! You are now logged in.', true);
+                    handleAuthSuccess(data.token);
+                } catch (err) {
+                    showAlert('register', err.message, false);
+                }
+            });
+        }
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+
+                try {
+                    const res = await fetch(`${API_URL}/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+                    const data = await res.json();
+                    if (!res.ok) {
+                        throw new Error(data.msg || 'Login failed');
+                    }
+                    showAlert('login', 'Login successful!', true);
+                    handleAuthSuccess(data.token);
+                } catch (err) {
+                    showAlert('login', err.message, false);
+                }
+            });
+        }
+
+        // Highlight active footer link
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const footerLinks = document.querySelectorAll('footer a');
+        footerLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('#')[0];
+            // Highlight index.html link
+            if (currentPage === 'index.html' && (linkPage === 'index.html' || linkPage === '')) {
+                link.classList.add('active-footer-link');
+            }
+        });
+
+    });
+  </script>
 </body>
 </html><!-- Deploy 2025-10-29 -->< ! - -   F o r c e   r e d e p l o y   - - > 
  

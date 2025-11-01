@@ -9,5 +9,16 @@
     "status": "approved",
     "scripture": "Philippians 4:7",
     "tags": ["peace", "trust", "faith"]
+  },
+  {
+    "id": "story-2",
+    "author": "Thomas",
+    "dateSubmitted": "2025-10-28T11:00:00Z",
+    "dateApproved": "2025-10-28T15:00:00Z",
+    "title": "From Doubt to Devotion",
+    "body": "I was known for my doubt. I couldn't bring myself to believe without seeing for myself. But when I finally saw the risen Lord, my doubt was washed away by a wave of undeniable truth. He met me in my skepticism and didn't turn me away. My declaration, 'My Lord and my God!' came not just from my lips, but from a heart completely transformed.",
+    "status": "approved",
+    "scripture": "John 20:28",
+    "tags": ["doubt", "faith", "resurrection"]
   }
 ]
