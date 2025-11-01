@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
+app.use('/api/prayer', require('./routes/prayer'));
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
